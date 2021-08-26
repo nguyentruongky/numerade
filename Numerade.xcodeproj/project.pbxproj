@@ -29,6 +29,7 @@
 		2600B76926D7286700593502 /* SwipeMenuViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 2600B76826D7286700593502 /* SwipeMenuViewController */; };
 		2600B76B26D7298600593502 /* SubjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76A26D7298600593502 /* SubjectController.swift */; };
 		2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76C26D739F300593502 /* KNUITextFieldExtension.swift */; };
+		2600B76F26D74AFB00593502 /* BookDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76E26D74AFB00593502 /* BookDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		2600B76126D71D2700593502 /* BooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksController.swift; sourceTree = "<group>"; };
 		2600B76A26D7298600593502 /* SubjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectController.swift; sourceTree = "<group>"; };
 		2600B76C26D739F300593502 /* KNUITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUITextFieldExtension.swift; sourceTree = "<group>"; };
+		2600B76E26D74AFB00593502 /* BookDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			children = (
 				2600B76126D71D2700593502 /* BooksController.swift */,
 				2600B76A26D7298600593502 /* SubjectController.swift */,
+				2600B76E26D74AFB00593502 /* BookDetailController.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				2600B75A26D71B3500593502 /* KNControlConstruction.swift in Sources */,
 				2600B71726D7195000593502 /* AppDelegate.swift in Sources */,
 				2600B75526D71B3500593502 /* KNGeneral.swift in Sources */,
+				2600B76F26D74AFB00593502 /* BookDetailController.swift in Sources */,
 				2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */,
 				2600B75B26D71B3500593502 /* KNConstraints.swift in Sources */,
 				2600B75726D71B3500593502 /* KNCollectionExtension.swift in Sources */,
