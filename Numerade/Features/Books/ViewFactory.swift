@@ -11,7 +11,7 @@ struct ViewFactory {
         textField.setCorner(radius: 12)
         return textField
     }
-    
+
     /**
     Default color is: #D8D8D8
      */
@@ -21,12 +21,13 @@ struct ViewFactory {
         line.height(1)
         return line
     }
-    
+
     static func createBackButton() -> UIButton {
         let backButton = UIButton(imageName: "back")
         backButton.square(edge: 44)
         return backButton
     }
+
 }
 
 class BookInfoView: KNView {
@@ -40,7 +41,7 @@ class BookInfoView: KNView {
         coverImageView.size(width: 88, height: 74)
         coverImageView.leftToSuperview()
         coverImageView.verticalSuperview()
-        
+
         let textStack = UIStackView(axis: .vertical, distribution: .equalCentering, alignment: .fill, space: 8)
         textStack.addArrangeViews(views: editionLabel, titleLabel, questionsLabel)
         addSubviews(views: textStack)
@@ -49,4 +50,28 @@ class BookInfoView: KNView {
         textStack.verticalSuperview()
     }
 
+}
+
+class NavigationBar: KNView {
+    let topBgImageView = UIImageView(imageName: "top_background", contentMode: .scaleAspectFill)
+    let searchTextField = ViewFactory.createSearchTextField(placeholder: "Search Chapters")
+    let backButton = ViewFactory.createBackButton()
+
+    override func setupView() {
+        addSubviews(views: topBgImageView)
+        topBgImageView.horizontalSuperview()
+        topBgImageView.topToSuperview()
+        topBgImageView.height(88)
+
+        let backButton = ViewFactory.createBackButton()
+        addSubviews(views: backButton)
+        backButton.leftToSuperview(space: 8)
+        backButton.topToSuperviewSafeArea(space: 8)
+
+        addSubviews(views: searchTextField)
+        searchTextField.leftHorizontalSpacing(toView: backButton, space: 8)
+        searchTextField.rightToSuperview(space: -24)
+        searchTextField.centerY(toView: backButton)
+        searchTextField.height(50)
+    }
 }

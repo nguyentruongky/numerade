@@ -3,35 +3,23 @@
 import UIKit
 
 class BookDetailController: KNController {
-    let topBgImageView = UIImageView(imageName: "top_background", contentMode: .scaleAspectFill)
-    let searchTextField = ViewFactory.createSearchTextField(placeholder: "Search Chapters")
     let bookView = BookInfoView()
     lazy var tableView = UITableView(cells: [ChapterCell.self], source: self)
     var datasource = [String]()
+    let navigationBar = NavigationBar()
 
     override func setupView() {
         view.backgroundColor = UIColor(hex: "#FEFFFE")
         tableView.backgroundColor = UIColor(hex: "#FEFFFE")
 
-        view.addSubviews(views: topBgImageView)
-        topBgImageView.horizontalSuperview()
-        topBgImageView.topToSuperview()
-        topBgImageView.height(88)
-
-        let backButton = ViewFactory.createBackButton()
-        view.addSubviews(views: backButton)
-        backButton.leftToSuperview(space: 8)
-        backButton.topToSuperviewSafeArea(space: 8)
-
-        view.addSubviews(views: searchTextField)
-        searchTextField.leftHorizontalSpacing(toView: backButton, space: 8)
-        searchTextField.rightToSuperview(space: -24)
-        searchTextField.centerY(toView: backButton)
-        searchTextField.height(50)
+        view.addSubviews(views: navigationBar)
+        navigationBar.horizontalSuperview()
+        navigationBar.topToSuperview()
+        navigationBar.height(88)
 
         view.addSubviews(views: bookView)
         bookView.horizontalSuperview(space: 24)
-        bookView.verticalSpacing(toView: topBgImageView, space: 56)
+        bookView.verticalSpacing(toView: navigationBar, space: 56)
 
         let line = ViewFactory.createHorizontalLine()
         view.addSubviews(views: line)
