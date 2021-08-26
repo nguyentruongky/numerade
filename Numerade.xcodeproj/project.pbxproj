@@ -26,6 +26,9 @@
 		2600B76026D71B6000593502 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B75F26D71B6000593502 /* MainTabController.swift */; };
 		2600B76226D71D2700593502 /* BooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76126D71D2700593502 /* BooksController.swift */; };
 		2600B76626D721A100593502 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2600B76526D721A100593502 /* Kingfisher */; };
+		2600B76926D7286700593502 /* SwipeMenuViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 2600B76826D7286700593502 /* SwipeMenuViewController */; };
+		2600B76B26D7298600593502 /* SubjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76A26D7298600593502 /* SubjectController.swift */; };
+		2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76C26D739F300593502 /* KNUITextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,8 @@
 		2600B75326D71B3500593502 /* KNTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNTableExtension.swift; sourceTree = "<group>"; };
 		2600B75F26D71B6000593502 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		2600B76126D71D2700593502 /* BooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksController.swift; sourceTree = "<group>"; };
+		2600B76A26D7298600593502 /* SubjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectController.swift; sourceTree = "<group>"; };
+		2600B76C26D739F300593502 /* KNUITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUITextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2600B76626D721A100593502 /* Kingfisher in Frameworks */,
+				2600B76926D7286700593502 /* SwipeMenuViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +175,7 @@
 		2600B74926D71B3500593502 /* BasicKit */ = {
 			isa = PBXGroup;
 			children = (
+				2600B76C26D739F300593502 /* KNUITextFieldExtension.swift */,
 				2600B74A26D71B3500593502 /* KNUIImageExtension.swift */,
 				2600B74B26D71B3500593502 /* KNGeneral.swift */,
 				2600B74C26D71B3500593502 /* KNUIButtonExtension.swift */,
@@ -196,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				2600B76126D71D2700593502 /* BooksController.swift */,
+				2600B76A26D7298600593502 /* SubjectController.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 			name = Numerade;
 			packageProductDependencies = (
 				2600B76526D721A100593502 /* Kingfisher */,
+				2600B76826D7286700593502 /* SwipeMenuViewController */,
 			);
 			productName = Numerade;
 			productReference = 2600B71326D7195000593502 /* Numerade.app */;
@@ -292,6 +301,7 @@
 			mainGroup = 2600B70A26D7195000593502;
 			packageReferences = (
 				2600B76426D721A100593502 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2600B76726D7286700593502 /* XCRemoteSwiftPackageReference "SwipeMenuViewController" */,
 			);
 			productRefGroup = 2600B71426D7195000593502 /* Products */;
 			projectDirPath = "";
@@ -335,9 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2600B76B26D7298600593502 /* SubjectController.swift in Sources */,
 				2600B75A26D71B3500593502 /* KNControlConstruction.swift in Sources */,
 				2600B71726D7195000593502 /* AppDelegate.swift in Sources */,
 				2600B75526D71B3500593502 /* KNGeneral.swift in Sources */,
+				2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */,
 				2600B75B26D71B3500593502 /* KNConstraints.swift in Sources */,
 				2600B75726D71B3500593502 /* KNCollectionExtension.swift in Sources */,
 				2600B75826D71B3500593502 /* KNView+KNController.swift in Sources */,
@@ -683,6 +695,14 @@
 				minimumVersion = 6.3.1;
 			};
 		};
+		2600B76726D7286700593502 /* XCRemoteSwiftPackageReference "SwipeMenuViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yysskk/SwipeMenuViewController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -690,6 +710,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2600B76426D721A100593502 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		2600B76826D7286700593502 /* SwipeMenuViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2600B76726D7286700593502 /* XCRemoteSwiftPackageReference "SwipeMenuViewController" */;
+			productName = SwipeMenuViewController;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
