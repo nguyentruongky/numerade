@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,19 @@
 		2600B72326D7196300593502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2600B72126D7196300593502 /* LaunchScreen.storyboard */; };
 		2600B72E26D7196400593502 /* NumeradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B72D26D7196400593502 /* NumeradeTests.swift */; };
 		2600B73926D7196400593502 /* NumeradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B73826D7196400593502 /* NumeradeUITests.swift */; };
+		2600B75426D71B3500593502 /* KNUIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B74A26D71B3500593502 /* KNUIImageExtension.swift */; };
+		2600B75526D71B3500593502 /* KNGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B74B26D71B3500593502 /* KNGeneral.swift */; };
+		2600B75626D71B3500593502 /* KNUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B74C26D71B3500593502 /* KNUIButtonExtension.swift */; };
+		2600B75726D71B3500593502 /* KNCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B74D26D71B3500593502 /* KNCollectionExtension.swift */; };
+		2600B75826D71B3500593502 /* KNView+KNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B74E26D71B3500593502 /* KNView+KNController.swift */; };
+		2600B75926D71B3500593502 /* Fonts+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B74F26D71B3500593502 /* Fonts+Colors.swift */; };
+		2600B75A26D71B3500593502 /* KNControlConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B75026D71B3500593502 /* KNControlConstruction.swift */; };
+		2600B75B26D71B3500593502 /* KNConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B75126D71B3500593502 /* KNConstraints.swift */; };
+		2600B75C26D71B3500593502 /* KNDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B75226D71B3500593502 /* KNDateExtension.swift */; };
+		2600B75D26D71B3500593502 /* KNTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B75326D71B3500593502 /* KNTableExtension.swift */; };
+		2600B76026D71B6000593502 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B75F26D71B6000593502 /* MainTabController.swift */; };
+		2600B76226D71D2700593502 /* BooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76126D71D2700593502 /* BooksController.swift */; };
+		2600B76626D721A100593502 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2600B76526D721A100593502 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +58,18 @@
 		2600B73426D7196400593502 /* NumeradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumeradeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2600B73826D7196400593502 /* NumeradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeradeUITests.swift; sourceTree = "<group>"; };
 		2600B73A26D7196400593502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2600B74A26D71B3500593502 /* KNUIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIImageExtension.swift; sourceTree = "<group>"; };
+		2600B74B26D71B3500593502 /* KNGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNGeneral.swift; sourceTree = "<group>"; };
+		2600B74C26D71B3500593502 /* KNUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIButtonExtension.swift; sourceTree = "<group>"; };
+		2600B74D26D71B3500593502 /* KNCollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNCollectionExtension.swift; sourceTree = "<group>"; };
+		2600B74E26D71B3500593502 /* KNView+KNController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KNView+KNController.swift"; sourceTree = "<group>"; };
+		2600B74F26D71B3500593502 /* Fonts+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Colors.swift"; sourceTree = "<group>"; };
+		2600B75026D71B3500593502 /* KNControlConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNControlConstruction.swift; sourceTree = "<group>"; };
+		2600B75126D71B3500593502 /* KNConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNConstraints.swift; sourceTree = "<group>"; };
+		2600B75226D71B3500593502 /* KNDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNDateExtension.swift; sourceTree = "<group>"; };
+		2600B75326D71B3500593502 /* KNTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNTableExtension.swift; sourceTree = "<group>"; };
+		2600B75F26D71B6000593502 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		2600B76126D71D2700593502 /* BooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2600B76626D721A100593502 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +121,10 @@
 		2600B71526D7195000593502 /* Numerade */ = {
 			isa = PBXGroup;
 			children = (
-				2600B74626D719F700593502 /* Configuration */,
+				2600B75E26D71B5700593502 /* Features */,
 				2600B74726D71A0400593502 /* Assets */,
+				2600B74926D71B3500593502 /* BasicKit */,
+				2600B74626D719F700593502 /* Configuration */,
 			);
 			path = Numerade;
 			sourceTree = "<group>";
@@ -138,6 +166,40 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		2600B74926D71B3500593502 /* BasicKit */ = {
+			isa = PBXGroup;
+			children = (
+				2600B74A26D71B3500593502 /* KNUIImageExtension.swift */,
+				2600B74B26D71B3500593502 /* KNGeneral.swift */,
+				2600B74C26D71B3500593502 /* KNUIButtonExtension.swift */,
+				2600B74D26D71B3500593502 /* KNCollectionExtension.swift */,
+				2600B74E26D71B3500593502 /* KNView+KNController.swift */,
+				2600B74F26D71B3500593502 /* Fonts+Colors.swift */,
+				2600B75026D71B3500593502 /* KNControlConstruction.swift */,
+				2600B75126D71B3500593502 /* KNConstraints.swift */,
+				2600B75226D71B3500593502 /* KNDateExtension.swift */,
+				2600B75326D71B3500593502 /* KNTableExtension.swift */,
+			);
+			path = BasicKit;
+			sourceTree = "<group>";
+		};
+		2600B75E26D71B5700593502 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				2600B75F26D71B6000593502 /* MainTabController.swift */,
+				2600B76326D71D2D00593502 /* Books */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		2600B76326D71D2D00593502 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				2600B76126D71D2700593502 /* BooksController.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +216,9 @@
 			dependencies = (
 			);
 			name = Numerade;
+			packageProductDependencies = (
+				2600B76526D721A100593502 /* Kingfisher */,
+			);
 			productName = Numerade;
 			productReference = 2600B71326D7195000593502 /* Numerade.app */;
 			productType = "com.apple.product-type.application";
@@ -225,6 +290,9 @@
 				Base,
 			);
 			mainGroup = 2600B70A26D7195000593502;
+			packageReferences = (
+				2600B76426D721A100593502 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 2600B71426D7195000593502 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,7 +335,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2600B75A26D71B3500593502 /* KNControlConstruction.swift in Sources */,
 				2600B71726D7195000593502 /* AppDelegate.swift in Sources */,
+				2600B75526D71B3500593502 /* KNGeneral.swift in Sources */,
+				2600B75B26D71B3500593502 /* KNConstraints.swift in Sources */,
+				2600B75726D71B3500593502 /* KNCollectionExtension.swift in Sources */,
+				2600B75826D71B3500593502 /* KNView+KNController.swift in Sources */,
+				2600B76026D71B6000593502 /* MainTabController.swift in Sources */,
+				2600B75926D71B3500593502 /* Fonts+Colors.swift in Sources */,
+				2600B75D26D71B3500593502 /* KNTableExtension.swift in Sources */,
+				2600B75C26D71B3500593502 /* KNDateExtension.swift in Sources */,
+				2600B75426D71B3500593502 /* KNUIImageExtension.swift in Sources */,
+				2600B75626D71B3500593502 /* KNUIButtonExtension.swift in Sources */,
+				2600B76226D71D2700593502 /* BooksController.swift in Sources */,
 				2600B71926D7195100593502 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +673,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2600B76426D721A100593502 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2600B76526D721A100593502 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2600B76426D721A100593502 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2600B70B26D7195000593502 /* Project object */;
 }
