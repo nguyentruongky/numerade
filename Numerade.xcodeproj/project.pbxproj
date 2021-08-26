@@ -30,6 +30,10 @@
 		2600B76B26D7298600593502 /* SubjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76A26D7298600593502 /* SubjectController.swift */; };
 		2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76C26D739F300593502 /* KNUITextFieldExtension.swift */; };
 		2600B76F26D74AFB00593502 /* BookDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76E26D74AFB00593502 /* BookDetailController.swift */; };
+		2600B77226D7719C00593502 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77126D7719C00593502 /* ChapterCell.swift */; };
+		2600B77526D771FD00593502 /* TopTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77426D771FD00593502 /* TopTabBarView.swift */; };
+		2600B77826D7723600593502 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77726D7723600593502 /* BookCell.swift */; };
+		2600B77A26D772A900593502 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77926D772A900593502 /* ViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		2600B76A26D7298600593502 /* SubjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectController.swift; sourceTree = "<group>"; };
 		2600B76C26D739F300593502 /* KNUITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUITextFieldExtension.swift; sourceTree = "<group>"; };
 		2600B76E26D74AFB00593502 /* BookDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailController.swift; sourceTree = "<group>"; };
+		2600B77126D7719C00593502 /* ChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
+		2600B77426D771FD00593502 /* TopTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarView.swift; sourceTree = "<group>"; };
+		2600B77726D7723600593502 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		2600B77926D772A900593502 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,11 +212,39 @@
 		2600B76326D71D2D00593502 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				2600B76126D71D2700593502 /* BooksController.swift */,
-				2600B76A26D7298600593502 /* SubjectController.swift */,
-				2600B76E26D74AFB00593502 /* BookDetailController.swift */,
+				2600B77026D7717700593502 /* BookDetail */,
+				2600B77326D771CB00593502 /* BooksHome */,
+				2600B77626D7721300593502 /* Subject */,
+				2600B77926D772A900593502 /* ViewFactory.swift */,
 			);
 			path = Books;
+			sourceTree = "<group>";
+		};
+		2600B77026D7717700593502 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2600B76E26D74AFB00593502 /* BookDetailController.swift */,
+				2600B77126D7719C00593502 /* ChapterCell.swift */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		2600B77326D771CB00593502 /* BooksHome */ = {
+			isa = PBXGroup;
+			children = (
+				2600B76126D71D2700593502 /* BooksController.swift */,
+				2600B77426D771FD00593502 /* TopTabBarView.swift */,
+			);
+			path = BooksHome;
+			sourceTree = "<group>";
+		};
+		2600B77626D7721300593502 /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				2600B77726D7723600593502 /* BookCell.swift */,
+				2600B76A26D7298600593502 /* SubjectController.swift */,
+			);
+			path = Subject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,14 +384,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2600B77226D7719C00593502 /* ChapterCell.swift in Sources */,
 				2600B76B26D7298600593502 /* SubjectController.swift in Sources */,
 				2600B75A26D71B3500593502 /* KNControlConstruction.swift in Sources */,
 				2600B71726D7195000593502 /* AppDelegate.swift in Sources */,
+				2600B77826D7723600593502 /* BookCell.swift in Sources */,
 				2600B75526D71B3500593502 /* KNGeneral.swift in Sources */,
 				2600B76F26D74AFB00593502 /* BookDetailController.swift in Sources */,
 				2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */,
 				2600B75B26D71B3500593502 /* KNConstraints.swift in Sources */,
 				2600B75726D71B3500593502 /* KNCollectionExtension.swift in Sources */,
+				2600B77526D771FD00593502 /* TopTabBarView.swift in Sources */,
 				2600B75826D71B3500593502 /* KNView+KNController.swift in Sources */,
 				2600B76026D71B6000593502 /* MainTabController.swift in Sources */,
 				2600B75926D71B3500593502 /* Fonts+Colors.swift in Sources */,
@@ -364,6 +403,7 @@
 				2600B75426D71B3500593502 /* KNUIImageExtension.swift in Sources */,
 				2600B75626D71B3500593502 /* KNUIButtonExtension.swift in Sources */,
 				2600B76226D71D2700593502 /* BooksController.swift in Sources */,
+				2600B77A26D772A900593502 /* ViewFactory.swift in Sources */,
 				2600B71926D7195100593502 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
