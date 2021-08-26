@@ -28,6 +28,7 @@ class BooksController: KNController {
     ]
 
     let topBgImageView = UIImageView(imageName: "top_background", contentMode: .scaleAspectFill)
+    lazy var searchTextField = createSearchTextField()
 
     override func setupView() {
         navigationController?.navigationBar.isHidden = true
@@ -38,11 +39,42 @@ class BooksController: KNController {
         topBgImageView.height(160)
 
         view.addSubviews(views: searchTextField)
-        searchTextField.horizontalSuperview(space: 32)
+        searchTextField.horizontalSuperview(space: 24)
         searchTextField.topToSuperviewSafeArea(space: 8)
         searchTextField.height(50)
 
         setupSwipeView()
+    }
+}
+
+extension BooksController: SwipeMenuViewDataSource, SwipeMenuViewDelegate {
+    func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int {
+        return controllers.count
+    }
+
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, titleForPageAt index: Int) -> String {
+        return controllers[index].title ?? ""
+    }
+
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
+        return controllers[index]
+    }
+
+    @objc public func swipeMenuView(_ swipeMenuView: SwipeMenuView, willChangeIndexFrom fromIndex: Int, to toIndex: Int) {
+        if tabBar.items.isEmpty { return }
+        tabBar.items[fromIndex].isSelected = false
+        tabBar.items[toIndex].isSelected = true
+    }
+}
+
+extension BooksController {
+    func createSearchTextField() -> UITextField {
+        let textField = UITextField(placeholder: "Search All Books", font: .main(), color: .white)
+        textField.setPlaceholderColor(.white)
+        textField.setView(.left, image: UIImage(named: "search"))
+        textField.backgroundColor = UIColor(hex: "#1D16B5")
+        textField.setCorner(radius: 12)
+        return textField
     }
 
     func setupSwipeView() {
@@ -69,33 +101,6 @@ class BooksController: KNController {
         tabBar.setupView(titles: titles)
     }
 
-    lazy var searchTextField = createSearchTextField()
-    func createSearchTextField() -> UITextField {
-        let textField = UITextField(placeholder: "Search All Books", font: .main(), color: .white)
-        textField.setPlaceholderColor(.white)
-        textField.setView(.left, image: UIImage(named: "search"))
-        textField.backgroundColor = UIColor(hex: "#1D16B5")
-        textField.setCorner(radius: 12)
-        return textField
-    }
-}
-
-extension BooksController: SwipeMenuViewDataSource, SwipeMenuViewDelegate {
-    func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int {
-        return controllers.count
-    }
-    func swipeMenuView(_ swipeMenuView: SwipeMenuView, titleForPageAt index: Int) -> String {
-        return controllers[index].title ?? ""
-    }
-    func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
-        return controllers[index]
-    }
-
-    @objc public func swipeMenuView(_ swipeMenuView: SwipeMenuView, willChangeIndexFrom fromIndex: Int, to toIndex: Int) {
-        if tabBar.items.isEmpty { return }
-        tabBar.items[fromIndex].isSelected = false
-        tabBar.items[toIndex].isSelected = true
-    }
 }
 
 class TabItemButton: UIButton {
