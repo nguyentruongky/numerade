@@ -27,9 +27,9 @@ extension UIFont {
 }
 
 extension UIColor {
-    static let color_0D0D0D = UIColor(hex: "#0D0D0D")!
-    static let color_424244 = UIColor(hex: "#424244")!
-    static let color_86878B = UIColor(hex: "#86878B")!
+    static let color_0D0D0D = UIColor(hex: "#0D0D0D")
+    static let color_424244 = UIColor(hex: "#424244")
+    static let color_86878B = UIColor(hex: "#86878B")
     static let bg = UIColor(hex: "#292A2E")
     
 }
