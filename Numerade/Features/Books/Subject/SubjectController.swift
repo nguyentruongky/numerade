@@ -2,13 +2,26 @@
 
 import UIKit
 
-class SubjectController: KNController {
-    var collectionView: UICollectionView!
-    var datasource = [String]()
+protocol SubjectDatasource: AnyObject {
+    func dataForCategory(_ category: String) -> [Book]
+}
 
-    convenience init(title: String) {
+class SubjectController: KNController {
+    override var shouldGetDataViewDidLoad: Bool { true }
+    var collectionView: UICollectionView!
+    var localDatasource = [Book]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    var category: String?
+    weak var datasource: SubjectDatasource?
+
+    convenience init(category: String) {
         self.init(nibName: nil, bundle: nil)
-        self.title = title
+        self.category = category
+        self.title = category
+        setupView()
     }
 
     override func setupView() {
@@ -33,15 +46,24 @@ class SubjectController: KNController {
         view.addSubviews(views: collectionView)
         collectionView.fillSuperView()
     }
+
+    override func getData() {
+        guard let category = category else { return }
+        if category.lowercased() == "all" {
+
+        }
+        localDatasource = datasource?.dataForCategory(category.lowercased()) ?? []
+    }
 }
 
 extension SubjectController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return datasource.count
+        return localDatasource.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: BookCell = collectionView.dequeue(at: indexPath)
+        cell.setData(localDatasource[indexPath.row])
         return cell
     }
 

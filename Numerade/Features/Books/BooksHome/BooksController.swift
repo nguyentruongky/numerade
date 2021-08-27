@@ -4,28 +4,27 @@ import SwipeMenuViewController
 import UIKit
 
 class BooksController: KNController {
+    override var shouldGetDataViewDidLoad: Bool { true }
     let swipeMenuView = SwipeMenuView(frame: .zero)
     let tabBar = TopTabBarView()
+    var controllers = [SubjectController]()
 
-    let titles = [
-        "All",
-        "Physics",
-        "Math",
-        "Chemistry",
-        "Biology",
-        "Economics",
-        "Psychology"
-    ]
-
-    var controllers = [
-        SubjectController(title: "All"),
-        SubjectController(title: "Physics"),
-        SubjectController(title: "Math"),
-        SubjectController(title: "Chemistry"),
-        SubjectController(title: "Biology"),
-        SubjectController(title: "Economics"),
-        SubjectController(title: "Psychology")
-    ]
+    var booksDatasource = [String: [Book]]() {
+        didSet {
+            reloadData()
+        }
+    }
+    var categories = [String]() {
+        didSet {
+            controllers = categories.map { [weak self] category in
+                let vc = SubjectController(category: category)
+                vc.datasource = self
+                return vc
+            }
+            tabBar.setupView(titles: categories)
+        }
+    }
+    lazy var interaction = BookInteraction(controller: self)
 
     let topBgImageView = UIImageView(imageName: "top_background", contentMode: .scaleAspectFill)
     let searchTextField = ViewFactory.createSearchTextField(placeholder: "Search All Books")
@@ -44,6 +43,31 @@ class BooksController: KNController {
         searchTextField.height(50)
 
         setupSwipeView()
+    }
+
+    override func getData() {
+        interaction.getData()
+    }
+
+    func reloadData() {
+        swipeMenuView.reloadData()
+        swipeMenuView.tabView?.isHidden = true
+        controllers.forEach {
+            $0.getData()
+        }
+    }
+}
+
+extension BooksController: SubjectDatasource {
+    func dataForCategory(_ category: String) -> [Book] {
+        if category.lowercased() == "all" {
+            var books = [Book]()
+            for (_, booksInCategory) in booksDatasource {
+                books.append(contentsOf: booksInCategory)
+            }
+            return books
+        }
+        return booksDatasource[category] ?? []
     }
 }
 
@@ -88,7 +112,5 @@ extension BooksController {
         tabBar.horizontalSuperview()
         tabBar.topToSuperview()
         tabBar.height(44)
-
-        tabBar.setupView(titles: titles)
     }
 }

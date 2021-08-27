@@ -29,27 +29,33 @@ class TabItemButton: UIButton {
 
 class TopTabBarView: KNView {
     var items = [TabItemButton]()
+    let stackView = UIStackView()
+
     func setupView(titles: [String]) {
-        let stackView = UIStackView()
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        items = []
+
         stackView.axis = .horizontal
         stackView.spacing = 12
-        
+
         for item in titles {
             let tab = TabItemButton(title: item)
             tab.height(32)
             items.append(tab)
             stackView.addArrangeViews(views: tab)
         }
-        
+
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.addSubviews(views: stackView)
         stackView.horizontalSuperview(space: 16)
         stackView.centerYToSuperview()
-        
+
         addSubviews(views: scrollView)
         scrollView.fillSuperView()
-        items[0].isSelected = true
+        if titles.isEmpty == false {
+            items[0].isSelected = true
+        }
         backgroundColor = .clear
     }
 }

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1541646762",
+    "title": "Lost in Math: How Beauty Leads Physics Astray",
+    "edition": "1st",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/51qVGLmmicL._SX331_BO1,204,203,200_.jpg",
+    "questionCount": 209,
+    "category": "physics"
+  },
+  {
+    "id": "0393285235",
+    "title": "Now: The Physics of Time",
+    "edition": "1st",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/51AcZEgZ2CL._SX326_BO1,204,203,200_.jpg",
+    "questionCount": 87,
+    "category": "physics"
+  },
+  {
+    "id": "B01MA4ZYE9",
+    "title": "Einstein Adds a New Dimension",
+    "edition": "2nd",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/51o3+Jc6iHL._SX398_BO1,204,203,200_.jpg",
+    "questionCount": 117,
+    "category": "physics"
+  },
+{
+    "id": "164137179X",
+    "title": "Banana Physics: A Young Physicist's Guide to Understanding the Universe ",
+    "edition": "2nd",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/41+ixSC35RL._SX322_BO1,204,203,200_.jpg",
+    "questionCount": 37,
+    "category": "physics"
+  },
+  {
+    "id": "1948117800",
+    "title": "Basic Physics: A Self-Teaching Guide",
+    "edition": "2nd",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/410jqdoIU-L._SX383_BO1,204,203,200_.jpg",
+    "questionCount": 19,
+    "category": "physics"
+  },
+   {
+    "id": "0744028892",
+    "title": "Super Simple Math",
+    "edition": "1st",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/41m3hgzOYoL._SX401_BO1,204,203,200_.jpg",
+    "questionCount": 209,
+    "category": "math"
+  },
+  {
+    "id": "0999443364",
+    "title": "Math Refresher for Adults: The Perfect Solution (Mastering Essential Math Skills)",
+    "edition": "1st",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/51isVn8rmML._SX384_BO1,204,203,200_.jpg",
+    "questionCount": 87,
+    "category": "math"
+  },
+  {
+    "id": "1951600762",
+    "title": "Guided Math AMPED: Five Steps to Your Best Math Block",
+    "edition": "2nd",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/419qAmM+1lS._SX331_BO1,204,203,200_.jpg",
+    "questionCount": 117,
+    "category": "math"
+  },
+{
+    "id": "0451480902",
+    "title": "I'm Trying to Love Math",
+    "edition": "2nd",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/51ke4Z85amL._SY451_BO1,204,203,200_.jpg",
+    "questionCount": 37,
+    "category": "math"
+  },
+  {
+    "id": "0300258518",
+    "title": "Mathematics for Human Flourishing",
+    "edition": "2nd",
+    "coverImageUrl": "https://images-na.ssl-images-amazon.com/images/I/41U01zdbmcL._SX331_BO1,204,203,200_.jpg",
+    "questionCount": 19,
+    "category": "math"
+  },
+
+]
