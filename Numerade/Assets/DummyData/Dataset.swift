@@ -28,8 +28,10 @@ class Dataset {
             title: book.title,
             questionCount: book.questionCount,
             category: book.category, chapters: chapters)
+        books[book.id] = bookDetail
         return bookDetail
     }
+    
     private static let chapterTitles = [
         "The Lemonade War",
         "Sideways Arithmetic From Wayside School",
