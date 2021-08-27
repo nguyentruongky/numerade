@@ -3,6 +3,7 @@
 import UIKit
 
 struct Chapter: Codable {
+    var id = UUID().uuidString
     let order: Int
     let title: String
     let questionCount: Int
