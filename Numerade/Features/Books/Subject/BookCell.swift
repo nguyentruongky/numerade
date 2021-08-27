@@ -24,7 +24,7 @@ class BookCell: KNCollectionCell {
     }
 
     func setData(_ data: Book) {
-        coverImageView.downloadImage(from: data.coverImageUrl)
+        coverImageView.downloadImage(from: data.coverImageUrl, placeholder: UIImage(named: "book_placeholder"))
         editionLabel.text = "\(data.edition) EDITION"
         titleLabel.text = data.title
         questionsLabel.text = "\(data.questionCount) Questions"

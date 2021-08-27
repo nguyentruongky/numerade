@@ -6,7 +6,6 @@ class ChapterCell: KNTableCell {
     let orderLabel = UILabel(text: "1", font: .main(.bold, size: 16), color: UIColor(hex: "#5037FB"), alignment: .center)
     let nameLabel = UILabel(font: .main(.bold, size: 15), color: UIColor.color_0D0D0D)
     let questionsLabel = UILabel(text: "0 Questions", font: .main(size: 15), color: UIColor(hex: "#484848"))
-    let taughtByLabel = UILabel(text: "Taught by", font: .main(size: 13), color: UIColor(hex: "#4C4C4C"))
     let teachersStackView = UIStackView()
     
     override func setupView() {
@@ -37,26 +36,36 @@ class ChapterCell: KNTableCell {
         contentView.addSubviews(views: line)
         line.horizontalSuperview(space: 24)
         line.bottomToSuperview()
-        
-        nameLabel.text = "Numerade is a venture-backed"
-        for i in 0 ..< 3 {
-            teachersStackView.addArrangeViews(views: createTeacherImageView())
-        }
-        
     }
     
-    func createTeacherImageView() -> UIImageView {
-        let imageView = UIImageView()
+    func setData(_ data: Chapter) {
+        orderLabel.text = "\(data.order)"
+        nameLabel.text = data.title
+        questionsLabel.text = "\(data.questionCount) Questions"
+        showTeachersImage(teachers: data.teachers)
+    }
+    
+    func showTeachersImage(teachers: [String]) {
+        teachersStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        for url in teachers {
+            teachersStackView.addArrangeViews(views: createTeacherImageView(url: url))
+        }
+    }
+    
+    private func createTeacherImageView(url: String) -> UIImageView {
+        let imageView = UIImageView(contentMode: .scaleAspectFill)
+        imageView.downloadImage(from: url)
         imageView.backgroundColor = .green
         imageView.square(edge: 24)
         imageView.setCorner(radius: 6)
         return imageView
     }
     
-    func createTextStack() -> UIStackView {
+    private func createTextStack() -> UIStackView {
         teachersStackView.axis = .horizontal
         teachersStackView.spacing = 4
         
+        let taughtByLabel = UILabel(text: "Taught by", font: .main(size: 13), color: UIColor(hex: "#4C4C4C"))
         let taughtByView = UIView()
         taughtByView.addSubviews(views: taughtByLabel, teachersStackView)
         taughtByView.stackHorizontally(views: [taughtByLabel, teachersStackView], viewSpaces: 8, leftSpace: 0, rightSpace: nil)

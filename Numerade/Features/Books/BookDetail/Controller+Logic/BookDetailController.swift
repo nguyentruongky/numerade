@@ -3,12 +3,16 @@
 import UIKit
 
 class BookDetailController: KNController {
+    override var shouldGetDataViewDidLoad: Bool { true }
+    var book: Book?
     let bookView = BookInfoView()
     lazy var tableView = UITableView(cells: [ChapterCell.self], source: self)
-    var datasource = [String]()
+    var datasource = [Chapter]()
     let navigationBar = NavigationBar()
+    lazy var interaction = BookDetailInteraction(controller: self)
 
     override func setupView() {
+        navigationBar.backButton.addTarget(self, action: #selector(popBack))
         view.backgroundColor = UIColor(hex: "#FEFFFE")
         tableView.backgroundColor = UIColor(hex: "#FEFFFE")
 
@@ -40,19 +44,42 @@ class BookDetailController: KNController {
         bookView.titleLabel.text = "Helps to make specific corners"
         bookView.questionsLabel.text = "100 Questions"
     }
+
+    override func getData() {
+        interaction.getData()
+        if let book = book {
+            bookView.setData(book)
+        }
+    }
+
+    @objc func popBack() {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+extension BookDetailController {
+    func setDataToUI(bookDetail: BookDetail) {
+        datasource = bookDetail.chapters
+    }
+
+    func showErrorMessage(_ message: String) {
+        let vc = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
+        vc.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(vc, animated: true)
+    }
 }
 
 extension BookDetailController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return datasource.count
-        return 8
+        return datasource.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ChapterCell = tableView.dequeue(at: indexPath)
+        cell.setData(datasource[indexPath.row])
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
