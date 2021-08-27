@@ -112,12 +112,13 @@ class ProblemDetailUI {
     private func setupBottomView(inView view: UIView) {
         view.addSubviews(views: bottomView)
         bottomView.horizontalSuperview()
-        bottomView.verticalSpacing(toView: answerLabel, space: 16)
+        bottomView.verticalSpacing(toView: answerLabel, space: 48)
         bottomView.bottomToSuperview()
     }
 
     private func setupScrollView(inView view: UIView) {
         let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubviews(views: containerView)
         containerView.fillSuperView()
         containerView.width(toView: scrollView)
