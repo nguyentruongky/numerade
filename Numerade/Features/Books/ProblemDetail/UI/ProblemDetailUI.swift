@@ -4,24 +4,31 @@ import UIKit
 
 class ProblemDetailUI {
     let videoView = VideoView()
-    let teacherImageView = UIImageView(imageName: "user", contentMode: .scaleAspectFill)
-    let teacherNameLabel = UILabel(font: .main(.bold, size: 15), color: .color_0D0D0D)
-    let likeButton = SocialButton(iconName: "like", title: "Like")
-    let shareButton = SocialButton(iconName: "share", title: "Share")
-    let saveButton = SocialButton(iconName: "save", title: "Save")
-    let reportButton = SocialButton(iconName: "report", title: "Report")
-    let buttonStack = UIStackView(axis: .horizontal, distribution: .fillEqually, alignment: .fill, space: 8)
-    let questionLabel = UILabel(font: .main(size: 15), color: .color_0D0D0D, numberOfLines: 0)
-    let answerStack = UIStackView(axis: .vertical, distribution: .fill, alignment: .fill, space: 4)
-    let answerLabel = UILabel(font: .main(size: 15), color: .color_0D0D0D, numberOfLines: 0)
-    let containerView = UIView()
-    let bottomView = ProblemBottomView()
+    private let teacherImageView = UIImageView(imageName: "user", contentMode: .scaleAspectFill)
+    private let teacherNameLabel = UILabel(font: .main(.bold, size: 15), color: .color_0D0D0D)
+    let closeButton = UIButton(imageName: "down")
+    private let likeButton = SocialButton(iconName: "like", title: "Like")
+    private let shareButton = SocialButton(iconName: "share", title: "Share")
+    private let saveButton = SocialButton(iconName: "save", title: "Save")
+    private let reportButton = SocialButton(iconName: "report", title: "Report")
+    private let buttonStack = UIStackView(axis: .horizontal, distribution: .fillEqually, alignment: .fill, space: 8)
+    private let questionLabel = UILabel(font: .main(size: 15), color: .color_0D0D0D, numberOfLines: 0)
+    private let answerStack = UIStackView(axis: .vertical, distribution: .fill, alignment: .fill, space: 4)
+    private let answerLabel = UILabel(font: .main(size: 15), color: .color_0D0D0D, numberOfLines: 0)
+    private let containerView = UIView()
+    private let bottomView = ProblemBottomView()
 
     func setupView(_ view: UIView) {
         view.addSubviews(views: videoView)
         videoView.horizontalSuperview()
         videoView.topToSuperview()
         videoView.height(UIScreen.main.bounds.width * 9 / 16)
+        
+        closeButton.imageView?.contentMode = .scaleAspectFit
+        closeButton.contentEdgeInsets = UIEdgeInsets(space: 8)
+        view.addSubviews(views: closeButton)
+        closeButton.square(edge: 44)
+        closeButton.topLeftToSuperView(topSpace: 8, leftSpace: 16)
 
         setupTeacherView(inView: containerView)
         setupSocialButton(inView: containerView)
@@ -29,27 +36,39 @@ class ProblemDetailUI {
         setupBottomView(inView: containerView)
 
         setupScrollView(inView: view)
+    }
+    
+    func setDataToUI(_ data: ProblemDetail) {
+        videoView.playVideo(url: data.videoUrl)
+        
+        teacherImageView.downloadImage(from: data.problem.teacherImageUrl)
+        teacherNameLabel.text = data.problem.teacherName
+        questionLabel.text = data.problem.content
+        showAnswers(data.choices, correctAnswer: data.answer)
 
-        teacherImageView.backgroundColor = .gray
-        teacherNameLabel.text = "Sally"
-        questionLabel.text = "Numerade is an equal opportunity workplace and is an affirmative action employer."
-        showAnswers([
-            "a. Since launch in 2019",
-            "b. we have helped over 15 million",
-            "c. struggling students in high school and colleges",
-            "d. across the U.S. learn and gain confidence"
-        ])
-        answerLabel.text = "C"
-
-        bottomView.informationView.bookTitleLabel.text = "Numerade is an equal opportunity"
-        bottomView.informationView.topicLabel.text = "an affirmative action employer"
-        bottomView.informationView.chapterLabel.text = "Chapter 1"
-        bottomView.informationView.chapterNameLabel.text = "Since launch in 2019"
+        bottomView.informationView.bookTitleLabel.text = data.book.title
+        bottomView.informationView.chapterLabel.text = "Chapter \(data.chapter.order)"
+        bottomView.informationView.chapterNameLabel.text = data.chapter.title
+        bottomView.informationView.topicLabel.text = data.topics.joined()
+        
+        bottomView.moreAnswerView.datasource = data.moreAnswers
+        bottomView.transcriptView.textLabel.text = data.transcript
     }
 
-    func showAnswers(_ answers: [String]) {
-        answers.forEach {
-            answerStack.addArrangeViews(views: UILabel(text: $0, font: .main(), color: .color_0D0D0D))
+    private func showAnswers(_ answers: [String], correctAnswer: String) {
+        answerStack.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        let abcd = ["A", "B", "C", "D"]
+        var orderedAnswer = [String]()
+        for i in 0 ..< answers.count {
+            orderedAnswer.append("\(abcd[i]). \(answers[i])")
+            if answers[i] == correctAnswer {
+                answerLabel.text = abcd[i]
+            }
+        }
+        
+        orderedAnswer.forEach {
+            answerStack.addArrangeViews(views: UILabel(text: $0, font: .main(), color: .color_0D0D0D, numberOfLines: 0))
         }
     }
 
@@ -90,6 +109,7 @@ class ProblemDetailUI {
 
         view.addSubviews(views: answerStack)
         answerStack.centerXToSuperview()
+        answerStack.left(toView: questionLabel, space: 24)
         answerStack.verticalSpacing(toView: questionLabel, space: 8)
 
         let answerTitleLabel = UILabel(text: "Answer", font: .main(.bold, size: 15), color: .color_0D0D0D)

@@ -12,57 +12,51 @@ extension ProblemDetailUI {
             problemImageView.topToSuperview()
             problemImageView.height(150)
 
-            teacherImageView.setCorner(radius: 6)
-            contentView.addSubviews(views: teacherImageView)
-            teacherImageView.bottomRight(toView: problemImageView, bottomSpace: -8, rightSpace: -8)
-            teacherImageView.square(edge: 48)
-
-            contentView.addSubviews(views: orderLabel)
-            orderLabel.left(toView: problemImageView)
-            orderLabel.verticalSpacing(toView: problemImageView, space: 16)
-
             contentView.addSubviews(views: teacherNameLabel)
-            teacherNameLabel.right(toView: problemImageView)
-            teacherNameLabel.centerY(toView: orderLabel)
+            teacherNameLabel.left(toView: problemImageView)
+            teacherNameLabel.verticalSpacing(toView: problemImageView, space: 16)
 
             contentView.addSubviews(views: questionLabel)
             questionLabel.horizontal(toView: problemImageView)
-            questionLabel.verticalSpacing(toView: orderLabel, space: 8)
+            questionLabel.verticalSpacing(toView: teacherNameLabel, space: 8)
 
             let line = ViewFactory.createHorizontalLine()
             contentView.addSubviews(views: line)
             line.horizontalSuperview(space: 24)
             line.bottomToSuperview(space: -24)
-
-            orderLabel.text = "Problem 1"
-            questionLabel.text = "Numerade is a venture-backed, high-growth education technology startup based in Los Angeles."
-            teacherNameLabel.text = "Numerade"
-
         }
     }
 
     class MoreAnswerView: KNView, UITableViewDataSource, UITableViewDelegate {
-        lazy var tableView = UITableView(cells: [MoreAnswerCell.self], source: self)
+        private let rowHeight: CGFloat = 280
+        private lazy var tableView = UITableView(cells: [MoreAnswerCell.self], source: self)
+        private var heightConstraint: NSLayoutConstraint?
+        var datasource = [Problem]() {
+            didSet {
+                tableView.reloadData()
+                heightConstraint?.constant = CGFloat(datasource.count) * rowHeight
+            }
+        }
 
         override func setupView() {
+            tableView.isScrollEnabled = false
             addSubviews(views: tableView)
             tableView.fillSuperView(space: UIEdgeInsets(top: 16))
-
-            height(1000)
+            heightConstraint = tableView.height(280)
         }
 
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            //        return datasource.count
-            return 8
+            return datasource.count
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell: MoreAnswerCell = tableView.dequeue(at: indexPath)
+            cell.setData(datasource[indexPath.row])
             return cell
         }
 
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            280
+            rowHeight
         }
     }
 }

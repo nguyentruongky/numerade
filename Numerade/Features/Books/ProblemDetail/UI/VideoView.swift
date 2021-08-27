@@ -1,10 +1,14 @@
 //  Created by Ky Nguyen
 
+import AVFoundation
+import AVKit
 import UIKit
 
 class VideoView: KNView {
-    let playButton = UIButton(imageName: "play")
-    let fullscreenButton = UIButton(imageName: "fullscreen")
+    private let playButton = UIButton(imageName: "play")
+    private let fullscreenButton = UIButton(imageName: "fullscreen")
+    private var player: AVPlayer?
+    var playerViewController: AVPlayerViewController?
     
     override func setupView() {
         backgroundColor = .black
@@ -17,5 +21,15 @@ class VideoView: KNView {
         addSubviews(views: fullscreenButton)
         fullscreenButton.square(edge: 44)
         fullscreenButton.bottomRight(toView: self, bottomSpace: -16, rightSpace: -16)
+    }
+    
+    func playVideo(url: String) {
+        let videoURL = URL(string: url)
+        player = AVPlayer(url: videoURL!)
+        playerViewController = AVPlayerViewController()
+        playerViewController?.player = player
+        addSubviews(views: playerViewController!.view)
+        playerViewController?.view.fillSuperView()
+        playerViewController?.player?.play()
     }
 }

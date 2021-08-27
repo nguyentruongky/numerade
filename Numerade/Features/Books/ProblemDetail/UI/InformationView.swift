@@ -8,7 +8,7 @@ extension ProblemDetailUI {
         let coverImageView = UIImageView(imageName: "book_placeholder", contentMode: .scaleAspectFill)
         let bookTitleLabel = UILabel(font: .main(size: 17), color: UIColor(hex: "#060606"), numberOfLines: 2)
         let chapterLabel = UILabel(font: .main(.bold, size: 15), color: UIColor(hex: "#5B5B5B"))
-        let chapterNameLabel = UILabel(font: .main(size: 15), color: UIColor(hex: "#555555"))
+        let chapterNameLabel = UILabel(font: .main(size: 17), color: UIColor(hex: "#333333"), numberOfLines: 0)
 
         override func setupView() {
             addTopicView()
@@ -45,11 +45,12 @@ extension ProblemDetailUI {
 
             addSubviews(views: bookTitleLabel)
             bookTitleLabel.leftHorizontalSpacing(toView: coverImageView, space: 8)
+            bookTitleLabel.rightToSuperview(space: -16)
             bookTitleLabel.top(toView: coverImageView)
 
             addSubviews(views: chapterNameLabel)
-            chapterNameLabel.left(toView: bookTitleLabel)
-            chapterNameLabel.centerY(toView: coverImageView)
+            chapterNameLabel.horizontal(toView: bookTitleLabel)
+            chapterNameLabel.verticalSpacing(toView: bookTitleLabel, space: 44)
 
             addSubviews(views: chapterLabel)
             chapterLabel.left(toView: chapterNameLabel)
