@@ -42,6 +42,7 @@
 		2618112C26D87C2A0083D8CD /* MoreAnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618112B26D87C2A0083D8CD /* MoreAnswersView.swift */; };
 		2618112E26D87C4E0083D8CD /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618112D26D87C4E0083D8CD /* InformationView.swift */; };
 		2618113026D87E6B0083D8CD /* TranscriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618112F26D87E6B0083D8CD /* TranscriptView.swift */; };
+		2618113226D87FC30083D8CD /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618113126D87FC30083D8CD /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		2618112B26D87C2A0083D8CD /* MoreAnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAnswersView.swift; sourceTree = "<group>"; };
 		2618112D26D87C4E0083D8CD /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		2618112F26D87E6B0083D8CD /* TranscriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptView.swift; sourceTree = "<group>"; };
+		2618113126D87FC30083D8CD /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,14 +279,23 @@
 		2618112826D82AEE0083D8CD /* ProblemDetail */ = {
 			isa = PBXGroup;
 			children = (
+				2618113326D880C80083D8CD /* Views */,
 				2600B78226D7A24C00593502 /* ProblemDetailController.swift */,
 				2618112626D82ADF0083D8CD /* ProblemDetailUI.swift */,
+			);
+			path = ProblemDetail;
+			sourceTree = "<group>";
+		};
+		2618113326D880C80083D8CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				2618112926D82AFE0083D8CD /* ProblemBottomView.swift */,
 				2618112D26D87C4E0083D8CD /* InformationView.swift */,
 				2618112B26D87C2A0083D8CD /* MoreAnswersView.swift */,
 				2618112F26D87E6B0083D8CD /* TranscriptView.swift */,
+				2618113126D87FC30083D8CD /* VideoView.swift */,
 			);
-			path = ProblemDetail;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +441,7 @@
 				2600B71726D7195000593502 /* AppDelegate.swift in Sources */,
 				2600B77826D7723600593502 /* BookCell.swift in Sources */,
 				2600B75526D71B3500593502 /* KNGeneral.swift in Sources */,
+				2618113226D87FC30083D8CD /* VideoView.swift in Sources */,
 				2600B76F26D74AFB00593502 /* BookDetailController.swift in Sources */,
 				2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */,
 				2600B75B26D71B3500593502 /* KNConstraints.swift in Sources */,

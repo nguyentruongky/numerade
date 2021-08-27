@@ -3,7 +3,7 @@
 import UIKit
 
 class ProblemDetailUI {
-    let videoView = UIView(background: .black)
+    let videoView = VideoView()
     let teacherImageView = UIImageView(imageName: "user", contentMode: .scaleAspectFill)
     let teacherNameLabel = UILabel(font: .main(.bold, size: 15), color: .color_0D0D0D)
     let likeButton = SocialButton(iconName: "like", title: "Like")
@@ -29,8 +29,6 @@ class ProblemDetailUI {
         setupBottomView(inView: containerView)
 
         setupScrollView(inView: view)
-
-//        bottomView.height(500)
 
         teacherImageView.backgroundColor = .gray
         teacherNameLabel.text = "Sally"
