@@ -20,7 +20,6 @@ class BookCell: KNCollectionCell {
         contentView.addSubviews(views: textStack)
         textStack.horizontalSuperview()
         textStack.verticalSpacing(toView: coverImageView, space: 8)
-        textStack.bottomToSuperview()
     }
 
     func setData(_ data: Book) {

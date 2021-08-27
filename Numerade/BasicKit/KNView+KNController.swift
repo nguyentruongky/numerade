@@ -84,4 +84,17 @@ extension UIView {
         layer.cornerRadius = radius
         clipsToBounds = true
     }
+
+    func zoomIn(_ isIn: Bool, complete: (() -> Void)? = nil) {
+        let initialValue: CGFloat = isIn ? 0.8 : 1
+        let endValue: CGFloat = isIn ? 1 : 0.8
+        transform = transform.scaledBy(x: initialValue, y: initialValue)
+        UIView.animate(withDuration: 0.35, delay: 0.0,
+                       usingSpringWithDamping: 0.9,
+                       initialSpringVelocity: 0.3,
+                       options: .curveEaseInOut,
+                       animations: { [weak self] in
+                        self?.transform = CGAffineTransform.identity.scaledBy(x: endValue, y: endValue)
+                       }, completion: { _ in complete?() })
+    }
 }

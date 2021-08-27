@@ -74,6 +74,9 @@ extension SubjectController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.showBookDetail(book: localDatasource[indexPath.row])
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.zoomIn(true, complete: {
+            self.delegate?.showBookDetail(book: self.localDatasource[indexPath.row])
+        })
     }
 }
