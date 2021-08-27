@@ -19,6 +19,7 @@ class BooksController: KNController {
             controllers = categories.map { [weak self] category in
                 let vc = SubjectController(category: category)
                 vc.datasource = self
+                vc.delegate = self
                 return vc
             }
             tabBar.setupView(titles: categories)
@@ -68,6 +69,14 @@ extension BooksController: SubjectDatasource {
             return books
         }
         return booksDatasource[category] ?? []
+    }
+}
+
+extension BooksController: SubjectDelegate {
+    func showBookDetail(book: Book) {
+        let vc = BookDetailController()
+        vc.book = book
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
