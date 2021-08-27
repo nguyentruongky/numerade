@@ -15,10 +15,10 @@ struct ViewFactory {
     /**
     Default color is: #D8D8D8
      */
-    static func createHorizontalLine(color: UIColor = UIColor(hex: "#D8D8D8")) -> UIView {
+    static func createHorizontalLine(color: UIColor = UIColor(hex: "#D8D8D8"), lineHeight: CGFloat = 1) -> UIView {
         let line = UIView(background: color)
         line.horizontalSuperview()
-        line.height(1)
+        line.height(lineHeight)
         return line
     }
 
