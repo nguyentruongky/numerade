@@ -61,9 +61,9 @@ class Dataset {
         }
 
         let choices = get4Choices()
-        let newProblemsCount = Int.random(in: 0...5)
+        let newProblemsCount = Int.random(in: 3...5)
         var newProblems = [Problem]()
-        for i in 2 ..< newProblemsCount {
+        for i in 0 ..< newProblemsCount {
             let prob = Problem(imageUrl: problemImages.randomElement()!,
                                order: i,
                                teacherImageUrl: "",

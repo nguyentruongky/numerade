@@ -36,12 +36,12 @@ class BooksController: KNController {
         view.addSubviews(views: topBgImageView)
         topBgImageView.horizontalSuperview()
         topBgImageView.topToSuperview()
-        topBgImageView.height(160)
+        topBgImageView.height(140)
 
         view.addSubviews(views: searchTextField)
         searchTextField.horizontalSuperview(space: 24)
         searchTextField.topToSuperviewSafeArea(space: 8)
-        searchTextField.height(50)
+        searchTextField.height(36)
 
         setupSwipeView()
     }
