@@ -34,7 +34,7 @@
 		2600B77526D771FD00593502 /* TopTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77426D771FD00593502 /* TopTabBarView.swift */; };
 		2600B77826D7723600593502 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77726D7723600593502 /* BookCell.swift */; };
 		2600B77A26D772A900593502 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77926D772A900593502 /* ViewFactory.swift */; };
-		2600B77C26D776F200593502 /* ProblemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77B26D776F200593502 /* ProblemsController.swift */; };
+		2600B77C26D776F200593502 /* ChapterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77B26D776F200593502 /* ChapterDetailController.swift */; };
 		2600B77E26D7798400593502 /* ProblemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77D26D7798400593502 /* ProblemCell.swift */; };
 		2618113E26D881760083D8CD /* ProblemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618113526D881760083D8CD /* ProblemDetailController.swift */; };
 		2618113F26D881760083D8CD /* ProblemDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618113626D881760083D8CD /* ProblemDetailUI.swift */; };
@@ -53,6 +53,10 @@
 		2618115726D8E5090083D8CD /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115626D8E5090083D8CD /* BookDetail.swift */; };
 		2618115926D8E7A30083D8CD /* BookDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */; };
 		2618115B26D8E7E50083D8CD /* GetBookDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */; };
+		2618116326D8F26A0083D8CD /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116226D8F26A0083D8CD /* Problem.swift */; };
+		2618116526D972C80083D8CD /* ChapterDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116426D972C80083D8CD /* ChapterDetailInteraction.swift */; };
+		2618116726D972EB0083D8CD /* GetChapterDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116626D972EB0083D8CD /* GetChapterDetailWorker.swift */; };
+		2618116926D973340083D8CD /* ChapterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116826D973340083D8CD /* ChapterDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +108,7 @@
 		2600B77426D771FD00593502 /* TopTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarView.swift; sourceTree = "<group>"; };
 		2600B77726D7723600593502 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		2600B77926D772A900593502 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
-		2600B77B26D776F200593502 /* ProblemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsController.swift; sourceTree = "<group>"; };
+		2600B77B26D776F200593502 /* ChapterDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDetailController.swift; sourceTree = "<group>"; };
 		2600B77D26D7798400593502 /* ProblemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemCell.swift; sourceTree = "<group>"; };
 		2618113526D881760083D8CD /* ProblemDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemDetailController.swift; sourceTree = "<group>"; };
 		2618113626D881760083D8CD /* ProblemDetailUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemDetailUI.swift; sourceTree = "<group>"; };
@@ -123,6 +127,10 @@
 		2618115626D8E5090083D8CD /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailInteraction.swift; sourceTree = "<group>"; };
 		2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookDetailWorker.swift; sourceTree = "<group>"; };
+		2618116226D8F26A0083D8CD /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
+		2618116426D972C80083D8CD /* ChapterDetailInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDetailInteraction.swift; sourceTree = "<group>"; };
+		2618116626D972EB0083D8CD /* GetChapterDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChapterDetailWorker.swift; sourceTree = "<group>"; };
+		2618116826D973340083D8CD /* ChapterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +261,7 @@
 			children = (
 				2600B77026D7717700593502 /* BookDetail */,
 				2600B77326D771CB00593502 /* BooksHome */,
-				2600B78126D7A13000593502 /* Problems */,
+				2600B78126D7A13000593502 /* ChapterDetail */,
 				2618113426D881760083D8CD /* ProblemDetail */,
 				2600B77626D7721300593502 /* Subject */,
 				2600B77926D772A900593502 /* ViewFactory.swift */,
@@ -267,6 +275,7 @@
 				2618115E26D8ED4B0083D8CD /* Controller+Logic */,
 				2618115C26D8ED290083D8CD /* Model */,
 				2618115D26D8ED340083D8CD /* UI */,
+				2618116F26D97A2D0083D8CD /* Workers */,
 			);
 			path = BookDetail;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 				2618115F26D8ED940083D8CD /* Controller+Logic */,
 				2618116126D8EDA80083D8CD /* Model */,
 				2618116026D8EDA20083D8CD /* UI */,
+				2618116E26D97A020083D8CD /* Workers */,
 			);
 			path = BooksHome;
 			sourceTree = "<group>";
@@ -284,43 +294,45 @@
 		2600B77626D7721300593502 /* Subject */ = {
 			isa = PBXGroup;
 			children = (
-				2600B77726D7723600593502 /* BookCell.swift */,
-				2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */,
-				2600B76A26D7298600593502 /* SubjectController.swift */,
+				2618117026D97A560083D8CD /* Controller+Logic */,
+				2618117226D97A6A0083D8CD /* UI */,
+				2618117126D97A630083D8CD /* Workers */,
 			);
 			path = Subject;
 			sourceTree = "<group>";
 		};
-		2600B78126D7A13000593502 /* Problems */ = {
+		2600B78126D7A13000593502 /* ChapterDetail */ = {
 			isa = PBXGroup;
 			children = (
-				2600B77B26D776F200593502 /* ProblemsController.swift */,
-				2600B77D26D7798400593502 /* ProblemCell.swift */,
+				2618116C26D979EB0083D8CD /* Controller+Logic */,
+				2618116A26D979D10083D8CD /* Model */,
+				2618116B26D979DA0083D8CD /* UI */,
+				2618116D26D979F10083D8CD /* Workers */,
 			);
-			path = Problems;
+			path = ChapterDetail;
 			sourceTree = "<group>";
 		};
 		2618113426D881760083D8CD /* ProblemDetail */ = {
 			isa = PBXGroup;
 			children = (
-				2618113826D881760083D8CD /* Views */,
-				2618113526D881760083D8CD /* ProblemDetailController.swift */,
-				2618113626D881760083D8CD /* ProblemDetailUI.swift */,
-				2618113726D881760083D8CD /* ProblemExtraView.swift */,
+				2618117326D97A870083D8CD /* Controller+Logic */,
+				2618113826D881760083D8CD /* UI */,
 			);
 			path = ProblemDetail;
 			sourceTree = "<group>";
 		};
-		2618113826D881760083D8CD /* Views */ = {
+		2618113826D881760083D8CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2618113926D881760083D8CD /* ProblemBottomView.swift */,
-				2618113A26D881760083D8CD /* MoreAnswersView.swift */,
-				2618113B26D881760083D8CD /* VideoView.swift */,
-				2618113C26D881760083D8CD /* TranscriptView.swift */,
 				2618113D26D881760083D8CD /* InformationView.swift */,
+				2618113A26D881760083D8CD /* MoreAnswersView.swift */,
+				2618113926D881760083D8CD /* ProblemBottomView.swift */,
+				2618113626D881760083D8CD /* ProblemDetailUI.swift */,
+				2618113726D881760083D8CD /* ProblemExtraView.swift */,
+				2618113C26D881760083D8CD /* TranscriptView.swift */,
+				2618113B26D881760083D8CD /* VideoView.swift */,
 			);
-			path = Views;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		2618114D26D88DFB0083D8CD /* DummyData */ = {
@@ -353,7 +365,6 @@
 			children = (
 				2600B76E26D74AFB00593502 /* BookDetailController.swift */,
 				2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */,
-				2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */,
 			);
 			path = "Controller+Logic";
 			sourceTree = "<group>";
@@ -363,7 +374,6 @@
 			children = (
 				2618115026D898E00083D8CD /* BookInteraction.swift */,
 				2600B76126D71D2700593502 /* BooksController.swift */,
-				2618114626D886270083D8CD /* GetCategoriesWorker.swift */,
 			);
 			path = "Controller+Logic";
 			sourceTree = "<group>";
@@ -382,6 +392,88 @@
 				2618114A26D88BE00083D8CD /* Book.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2618116A26D979D10083D8CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2618116826D973340083D8CD /* ChapterDetail.swift */,
+				2618116226D8F26A0083D8CD /* Problem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2618116B26D979DA0083D8CD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2600B77D26D7798400593502 /* ProblemCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2618116C26D979EB0083D8CD /* Controller+Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2600B77B26D776F200593502 /* ChapterDetailController.swift */,
+				2618116426D972C80083D8CD /* ChapterDetailInteraction.swift */,
+			);
+			path = "Controller+Logic";
+			sourceTree = "<group>";
+		};
+		2618116D26D979F10083D8CD /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				2618116626D972EB0083D8CD /* GetChapterDetailWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		2618116E26D97A020083D8CD /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				2618114626D886270083D8CD /* GetCategoriesWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		2618116F26D97A2D0083D8CD /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		2618117026D97A560083D8CD /* Controller+Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2600B76A26D7298600593502 /* SubjectController.swift */,
+			);
+			path = "Controller+Logic";
+			sourceTree = "<group>";
+		};
+		2618117126D97A630083D8CD /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		2618117226D97A6A0083D8CD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2600B77726D7723600593502 /* BookCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2618117326D97A870083D8CD /* Controller+Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2618113526D881760083D8CD /* ProblemDetailController.swift */,
+			);
+			path = "Controller+Logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,18 +641,22 @@
 				2618114726D886270083D8CD /* GetCategoriesWorker.swift in Sources */,
 				2618113E26D881760083D8CD /* ProblemDetailController.swift in Sources */,
 				2618114026D881760083D8CD /* ProblemExtraView.swift in Sources */,
+				2618116926D973340083D8CD /* ChapterDetail.swift in Sources */,
 				2600B77E26D7798400593502 /* ProblemCell.swift in Sources */,
 				2600B75426D71B3500593502 /* KNUIImageExtension.swift in Sources */,
 				2618114226D881760083D8CD /* MoreAnswersView.swift in Sources */,
 				2600B75626D71B3500593502 /* KNUIButtonExtension.swift in Sources */,
 				2600B76226D71D2700593502 /* BooksController.swift in Sources */,
 				2618115526D8E2000083D8CD /* Dataset.swift in Sources */,
+				2618116326D8F26A0083D8CD /* Problem.swift in Sources */,
 				2618115B26D8E7E50083D8CD /* GetBookDetailWorker.swift in Sources */,
+				2618116526D972C80083D8CD /* ChapterDetailInteraction.swift in Sources */,
 				2600B77A26D772A900593502 /* ViewFactory.swift in Sources */,
 				2618113F26D881760083D8CD /* ProblemDetailUI.swift in Sources */,
 				2600B71926D7195100593502 /* SceneDelegate.swift in Sources */,
+				2618116726D972EB0083D8CD /* GetChapterDetailWorker.swift in Sources */,
 				2618114926D88BC70083D8CD /* GetAllBooksWorker.swift in Sources */,
-				2600B77C26D776F200593502 /* ProblemsController.swift in Sources */,
+				2600B77C26D776F200593502 /* ChapterDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
