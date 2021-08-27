@@ -25,11 +25,10 @@ class ChapterDetailController: KNController {
         view.addSubviews(views: navigationBar)
         navigationBar.horizontalSuperview()
         navigationBar.topToSuperview()
-        navigationBar.height(88)
 
         view.addSubviews(views: bookView)
         bookView.horizontalSuperview(space: 24)
-        bookView.verticalSpacing(toView: navigationBar, space: 56)
+        bookView.verticalSpacing(toView: navigationBar, space: 24)
 
         let line = ViewFactory.createHorizontalLine()
         view.addSubviews(views: line)

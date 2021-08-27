@@ -34,10 +34,10 @@ class SubjectController: KNController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let screenWidth = UIScreen.main.bounds.width
-        layout.minimumLineSpacing = 16
+        layout.minimumLineSpacing = 48
         layout.minimumInteritemSpacing = 16
         let itemWidth = (screenWidth - 48) / 2
-        layout.itemSize = CGSize(width: itemWidth, height: itemWidth + 68)
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth + 88)
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false

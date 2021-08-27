@@ -64,10 +64,10 @@ class NavigationBar: KNView {
     let backButton = ViewFactory.createBackButton()
 
     override func setupView() {
+        clipsToBounds = true
         addSubviews(views: topBgImageView)
-        topBgImageView.horizontalSuperview()
-        topBgImageView.topToSuperview()
-        topBgImageView.height(88)
+        topBgImageView.fillSuperView()
+        topBgImageView.height(116)
 
         addSubviews(views: backButton)
         backButton.leftToSuperview(space: 8)
