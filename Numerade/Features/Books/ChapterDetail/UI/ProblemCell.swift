@@ -5,7 +5,7 @@ import UIKit
 class ProblemCell: KNTableCell {
     let problemImageView = UIImageView(contentMode: .scaleAspectFill)
     let teacherImageView = UIImageView(imageName: "user", contentMode: .scaleAspectFill)
-    let teacherNameLabel = UILabel(font: .main(), color: .color_0D0D0D)
+    let teacherNameLabel = UILabel(font: .main(.bold, size: 15), color: .color_0D0D0D)
     let orderLabel = UILabel(font: .main(), color: .color_0D0D0D)
     let questionLabel = UILabel(font: .main(), color: .color_0D0D0D, numberOfLines: 2)
     

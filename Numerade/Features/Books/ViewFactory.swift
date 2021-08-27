@@ -77,6 +77,6 @@ class NavigationBar: KNView {
         searchTextField.leftHorizontalSpacing(toView: backButton, space: 8)
         searchTextField.rightToSuperview(space: -24)
         searchTextField.centerY(toView: backButton)
-        searchTextField.height(40)
+        searchTextField.height(36)
     }
 }
