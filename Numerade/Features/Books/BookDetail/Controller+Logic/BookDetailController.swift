@@ -51,21 +51,11 @@ class BookDetailController: KNController {
             bookView.setData(book)
         }
     }
-
-    @objc func popBack() {
-        navigationController?.popViewController(animated: true)
-    }
 }
 
 extension BookDetailController {
     func setDataToUI(bookDetail: BookDetail) {
         datasource = bookDetail.chapters
-    }
-
-    func showErrorMessage(_ message: String) {
-        let vc = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
-        vc.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(vc, animated: true)
     }
 }
 
@@ -82,5 +72,12 @@ extension BookDetailController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ChapterDetailController()
+        vc.book = book
+        vc.chapter = datasource[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
