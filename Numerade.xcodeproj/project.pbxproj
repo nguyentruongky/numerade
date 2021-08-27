@@ -57,6 +57,9 @@
 		2618116526D972C80083D8CD /* ChapterDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116426D972C80083D8CD /* ChapterDetailInteraction.swift */; };
 		2618116726D972EB0083D8CD /* GetChapterDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116626D972EB0083D8CD /* GetChapterDetailWorker.swift */; };
 		2618116926D973340083D8CD /* ChapterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116826D973340083D8CD /* ChapterDetail.swift */; };
+		2618117526D97E4F0083D8CD /* ProblemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618117426D97E4F0083D8CD /* ProblemDetail.swift */; };
+		2618117726D982E60083D8CD /* ProblemDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618117626D982E60083D8CD /* ProblemDetailInteraction.swift */; };
+		2618117926D9830C0083D8CD /* GetProblemDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618117826D9830C0083D8CD /* GetProblemDetailWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +134,9 @@
 		2618116426D972C80083D8CD /* ChapterDetailInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDetailInteraction.swift; sourceTree = "<group>"; };
 		2618116626D972EB0083D8CD /* GetChapterDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChapterDetailWorker.swift; sourceTree = "<group>"; };
 		2618116826D973340083D8CD /* ChapterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDetail.swift; sourceTree = "<group>"; };
+		2618117426D97E4F0083D8CD /* ProblemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetail.swift; sourceTree = "<group>"; };
+		2618117626D982E60083D8CD /* ProblemDetailInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetailInteraction.swift; sourceTree = "<group>"; };
+		2618117826D9830C0083D8CD /* GetProblemDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProblemDetailWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,7 +322,9 @@
 			isa = PBXGroup;
 			children = (
 				2618117326D97A870083D8CD /* Controller+Logic */,
+				2618117A26D98DB60083D8CD /* Model */,
 				2618113826D881760083D8CD /* UI */,
+				2618117B26D98DBC0083D8CD /* Workers */,
 			);
 			path = ProblemDetail;
 			sourceTree = "<group>";
@@ -472,8 +480,25 @@
 			isa = PBXGroup;
 			children = (
 				2618113526D881760083D8CD /* ProblemDetailController.swift */,
+				2618117626D982E60083D8CD /* ProblemDetailInteraction.swift */,
 			);
 			path = "Controller+Logic";
+			sourceTree = "<group>";
+		};
+		2618117A26D98DB60083D8CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2618117426D97E4F0083D8CD /* ProblemDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2618117B26D98DBC0083D8CD /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				2618117826D9830C0083D8CD /* GetProblemDetailWorker.swift */,
+			);
+			path = Workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -649,13 +674,16 @@
 				2600B76226D71D2700593502 /* BooksController.swift in Sources */,
 				2618115526D8E2000083D8CD /* Dataset.swift in Sources */,
 				2618116326D8F26A0083D8CD /* Problem.swift in Sources */,
+				2618117926D9830C0083D8CD /* GetProblemDetailWorker.swift in Sources */,
 				2618115B26D8E7E50083D8CD /* GetBookDetailWorker.swift in Sources */,
+				2618117726D982E60083D8CD /* ProblemDetailInteraction.swift in Sources */,
 				2618116526D972C80083D8CD /* ChapterDetailInteraction.swift in Sources */,
 				2600B77A26D772A900593502 /* ViewFactory.swift in Sources */,
 				2618113F26D881760083D8CD /* ProblemDetailUI.swift in Sources */,
 				2600B71926D7195100593502 /* SceneDelegate.swift in Sources */,
 				2618116726D972EB0083D8CD /* GetChapterDetailWorker.swift in Sources */,
 				2618114926D88BC70083D8CD /* GetAllBooksWorker.swift in Sources */,
+				2618117526D97E4F0083D8CD /* ProblemDetail.swift in Sources */,
 				2600B77C26D776F200593502 /* ChapterDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
