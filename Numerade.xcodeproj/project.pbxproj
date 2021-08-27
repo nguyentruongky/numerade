@@ -44,6 +44,15 @@
 		2618114326D881760083D8CD /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618113B26D881760083D8CD /* VideoView.swift */; };
 		2618114426D881760083D8CD /* TranscriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618113C26D881760083D8CD /* TranscriptView.swift */; };
 		2618114526D881760083D8CD /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618113D26D881760083D8CD /* InformationView.swift */; };
+		2618114726D886270083D8CD /* GetCategoriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618114626D886270083D8CD /* GetCategoriesWorker.swift */; };
+		2618114926D88BC70083D8CD /* GetAllBooksWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */; };
+		2618114B26D88BE00083D8CD /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618114A26D88BE00083D8CD /* Book.swift */; };
+		2618114F26D88E0A0083D8CD /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 2618114E26D88E0A0083D8CD /* books.json */; };
+		2618115126D898E00083D8CD /* BookInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115026D898E00083D8CD /* BookInteraction.swift */; };
+		2618115526D8E2000083D8CD /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115426D8E2000083D8CD /* Dataset.swift */; };
+		2618115726D8E5090083D8CD /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115626D8E5090083D8CD /* BookDetail.swift */; };
+		2618115926D8E7A30083D8CD /* BookDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */; };
+		2618115B26D8E7E50083D8CD /* GetBookDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +114,15 @@
 		2618113B26D881760083D8CD /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		2618113C26D881760083D8CD /* TranscriptView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscriptView.swift; sourceTree = "<group>"; };
 		2618113D26D881760083D8CD /* InformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		2618114626D886270083D8CD /* GetCategoriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoriesWorker.swift; sourceTree = "<group>"; };
+		2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllBooksWorker.swift; sourceTree = "<group>"; };
+		2618114A26D88BE00083D8CD /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		2618114E26D88E0A0083D8CD /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
+		2618115026D898E00083D8CD /* BookInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInteraction.swift; sourceTree = "<group>"; };
+		2618115426D8E2000083D8CD /* Dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
+		2618115626D8E5090083D8CD /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
+		2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailInteraction.swift; sourceTree = "<group>"; };
+		2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookDetailWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +214,7 @@
 		2600B74726D71A0400593502 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2618114D26D88DFB0083D8CD /* DummyData */,
 				2600B71F26D7196300593502 /* Assets.xcassets */,
 				2600B72126D7196300593502 /* LaunchScreen.storyboard */,
 			);
@@ -245,8 +264,9 @@
 		2600B77026D7717700593502 /* BookDetail */ = {
 			isa = PBXGroup;
 			children = (
-				2600B76E26D74AFB00593502 /* BookDetailController.swift */,
-				2600B77126D7719C00593502 /* ChapterCell.swift */,
+				2618115E26D8ED4B0083D8CD /* Controller+Logic */,
+				2618115C26D8ED290083D8CD /* Model */,
+				2618115D26D8ED340083D8CD /* UI */,
 			);
 			path = BookDetail;
 			sourceTree = "<group>";
@@ -254,8 +274,9 @@
 		2600B77326D771CB00593502 /* BooksHome */ = {
 			isa = PBXGroup;
 			children = (
-				2600B76126D71D2700593502 /* BooksController.swift */,
-				2600B77426D771FD00593502 /* TopTabBarView.swift */,
+				2618115F26D8ED940083D8CD /* Controller+Logic */,
+				2618116126D8EDA80083D8CD /* Model */,
+				2618116026D8EDA20083D8CD /* UI */,
 			);
 			path = BooksHome;
 			sourceTree = "<group>";
@@ -264,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				2600B77726D7723600593502 /* BookCell.swift */,
+				2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */,
 				2600B76A26D7298600593502 /* SubjectController.swift */,
 			);
 			path = Subject;
@@ -299,6 +321,67 @@
 				2618113D26D881760083D8CD /* InformationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2618114D26D88DFB0083D8CD /* DummyData */ = {
+			isa = PBXGroup;
+			children = (
+				2618114E26D88E0A0083D8CD /* books.json */,
+				2618115426D8E2000083D8CD /* Dataset.swift */,
+			);
+			path = DummyData;
+			sourceTree = "<group>";
+		};
+		2618115C26D8ED290083D8CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2618115626D8E5090083D8CD /* BookDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2618115D26D8ED340083D8CD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2600B77126D7719C00593502 /* ChapterCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2618115E26D8ED4B0083D8CD /* Controller+Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2600B76E26D74AFB00593502 /* BookDetailController.swift */,
+				2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */,
+				2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */,
+			);
+			path = "Controller+Logic";
+			sourceTree = "<group>";
+		};
+		2618115F26D8ED940083D8CD /* Controller+Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2618115026D898E00083D8CD /* BookInteraction.swift */,
+				2600B76126D71D2700593502 /* BooksController.swift */,
+				2618114626D886270083D8CD /* GetCategoriesWorker.swift */,
+			);
+			path = "Controller+Logic";
+			sourceTree = "<group>";
+		};
+		2618116026D8EDA20083D8CD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2600B77426D771FD00593502 /* TopTabBarView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2618116126D8EDA80083D8CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2618114A26D88BE00083D8CD /* Book.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2618114F26D88E0A0083D8CD /* books.json in Resources */,
 				2600B72326D7196300593502 /* LaunchScreen.storyboard in Resources */,
 				2600B72026D7196300593502 /* Assets.xcassets in Resources */,
 			);
@@ -441,11 +525,14 @@
 				2618114126D881760083D8CD /* ProblemBottomView.swift in Sources */,
 				2600B77226D7719C00593502 /* ChapterCell.swift in Sources */,
 				2618114326D881760083D8CD /* VideoView.swift in Sources */,
+				2618115726D8E5090083D8CD /* BookDetail.swift in Sources */,
 				2600B76B26D7298600593502 /* SubjectController.swift in Sources */,
 				2600B75A26D71B3500593502 /* KNControlConstruction.swift in Sources */,
+				2618115126D898E00083D8CD /* BookInteraction.swift in Sources */,
 				2600B71726D7195000593502 /* AppDelegate.swift in Sources */,
 				2600B77826D7723600593502 /* BookCell.swift in Sources */,
 				2600B75526D71B3500593502 /* KNGeneral.swift in Sources */,
+				2618115926D8E7A30083D8CD /* BookDetailInteraction.swift in Sources */,
 				2600B76F26D74AFB00593502 /* BookDetailController.swift in Sources */,
 				2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */,
 				2618114426D881760083D8CD /* TranscriptView.swift in Sources */,
@@ -454,10 +541,12 @@
 				2600B77526D771FD00593502 /* TopTabBarView.swift in Sources */,
 				2600B75826D71B3500593502 /* KNView+KNController.swift in Sources */,
 				2600B76026D71B6000593502 /* MainTabController.swift in Sources */,
+				2618114B26D88BE00083D8CD /* Book.swift in Sources */,
 				2600B75926D71B3500593502 /* Fonts+Colors.swift in Sources */,
 				2600B75D26D71B3500593502 /* KNTableExtension.swift in Sources */,
 				2600B75C26D71B3500593502 /* KNDateExtension.swift in Sources */,
 				2618114526D881760083D8CD /* InformationView.swift in Sources */,
+				2618114726D886270083D8CD /* GetCategoriesWorker.swift in Sources */,
 				2618113E26D881760083D8CD /* ProblemDetailController.swift in Sources */,
 				2618114026D881760083D8CD /* ProblemExtraView.swift in Sources */,
 				2600B77E26D7798400593502 /* ProblemCell.swift in Sources */,
@@ -465,9 +554,12 @@
 				2618114226D881760083D8CD /* MoreAnswersView.swift in Sources */,
 				2600B75626D71B3500593502 /* KNUIButtonExtension.swift in Sources */,
 				2600B76226D71D2700593502 /* BooksController.swift in Sources */,
+				2618115526D8E2000083D8CD /* Dataset.swift in Sources */,
+				2618115B26D8E7E50083D8CD /* GetBookDetailWorker.swift in Sources */,
 				2600B77A26D772A900593502 /* ViewFactory.swift in Sources */,
 				2618113F26D881760083D8CD /* ProblemDetailUI.swift in Sources */,
 				2600B71926D7195100593502 /* SceneDelegate.swift in Sources */,
+				2618114926D88BC70083D8CD /* GetAllBooksWorker.swift in Sources */,
 				2600B77C26D776F200593502 /* ProblemsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
