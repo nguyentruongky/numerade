@@ -6,6 +6,10 @@ protocol SubjectDatasource: AnyObject {
     func dataForCategory(_ category: String) -> [Book]
 }
 
+protocol SubjectDelegate: AnyObject {
+    func showBookDetail(book: Book)
+}
+
 class SubjectController: KNController {
     override var shouldGetDataViewDidLoad: Bool { true }
     var collectionView: UICollectionView!
@@ -15,7 +19,9 @@ class SubjectController: KNController {
         }
     }
     var category: String?
+    var showBookDetailAction: ((BookDetailController) -> Void)?
     weak var datasource: SubjectDatasource?
+    weak var delegate: SubjectDelegate?
 
     convenience init(category: String) {
         self.init(nibName: nil, bundle: nil)
@@ -68,6 +74,6 @@ extension SubjectController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        delegate?.showBookDetail(book: localDatasource[indexPath.row])
     }
 }
