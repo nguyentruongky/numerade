@@ -52,6 +52,7 @@ class BookInfoView: KNView {
 
     func setData(_ book: Book) {
         coverImageView.downloadImage(from: book.coverImageUrl)
+        titleLabel.text = book.title
         editionLabel.text = "\(book.edition) EDITION"
         questionsLabel.text = "\(book.questionCount) Questions"
     }
@@ -76,6 +77,6 @@ class NavigationBar: KNView {
         searchTextField.leftHorizontalSpacing(toView: backButton, space: 8)
         searchTextField.rightToSuperview(space: -24)
         searchTextField.centerY(toView: backButton)
-        searchTextField.height(50)
+        searchTextField.height(40)
     }
 }
