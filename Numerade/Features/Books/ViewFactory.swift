@@ -50,6 +50,11 @@ class BookInfoView: KNView {
         textStack.verticalSuperview()
     }
 
+    func setData(_ book: Book) {
+        coverImageView.downloadImage(from: book.coverImageUrl)
+        editionLabel.text = "\(book.edition) EDITION"
+        questionsLabel.text = "\(book.questionCount) Questions"
+    }
 }
 
 class NavigationBar: KNView {
@@ -63,7 +68,6 @@ class NavigationBar: KNView {
         topBgImageView.topToSuperview()
         topBgImageView.height(88)
 
-        let backButton = ViewFactory.createBackButton()
         addSubviews(views: backButton)
         backButton.leftToSuperview(space: 8)
         backButton.topToSuperviewSafeArea(space: 8)
