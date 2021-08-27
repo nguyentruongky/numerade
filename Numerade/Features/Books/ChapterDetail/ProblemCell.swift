@@ -38,11 +38,13 @@ class ProblemCell: KNTableCell {
         contentView.addSubviews(views: line)
         line.horizontalSuperview(space: 24)
         line.bottomToSuperview(space: -24)
-        
-        
-        
-        orderLabel.text = "Problem 1"
-        questionLabel.text = "Numerade is a venture-backed, high-growth education technology startup based in Los Angeles."
-        teacherNameLabel.text = "Numerade"
+    }
+    
+    func setData(_ data: Problem) {
+        problemImageView.downloadImage(from: data.imageUrl)
+        teacherImageView.downloadImage(from: data.teacherImageUrl)
+        teacherNameLabel.text = data.teacherName
+        orderLabel.text = "Problem \(data.order)"
+        questionLabel.text = data.content
     }
 }

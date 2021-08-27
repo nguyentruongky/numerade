@@ -2,16 +2,26 @@
 
 import UIKit
 
-class ProblemsController: KNController {
+class ChapterDetailController: KNController {
+    override var shouldGetDataViewDidLoad: Bool { true }
+    lazy var interaction = ChapterDetailInteraction(controller: self)
     let bookView = BookInfoView()
+    var book: Book?
+    var chapter: Chapter?
+    
     lazy var tableView = UITableView(cells: [ProblemCell.self], source: self)
-    var datasource = [String]()
+    var datasource = [Problem]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     let navigationBar = NavigationBar()
     
     override func setupView() {
         view.backgroundColor = UIColor(hex: "#FEFFFE")
         tableView.backgroundColor = UIColor(hex: "#FEFFFE")
         
+        formatNavigationBar()
         view.addSubviews(views: navigationBar)
         navigationBar.horizontalSuperview()
         navigationBar.topToSuperview()
@@ -35,21 +45,39 @@ class ProblemsController: KNController {
         tableView.horizontalSuperview()
         tableView.verticalSpacing(toView: chapterLabel, space: 24)
         tableView.bottomToSuperview()
+    }
+    
+    override func getData() {
+        if let book = book {
+            bookView.setData(book)
+        }
         
-        bookView.editionLabel.text = "1st EDITION"
-        bookView.titleLabel.text = "Helps to make specific corners"
-        bookView.questionsLabel.text = "100 Questions"
+        interaction.getData()
+        navigationBar.searchTextField.text = chapter?.title
+    }
+    
+    func formatNavigationBar() {
+        navigationBar.searchTextField.isEnabled = false
+        navigationBar.searchTextField.setView(.left, space: 16)
+        navigationBar.searchTextField.setView(.right, space: 16)
+        navigationBar.backButton.addTarget(self, action: #selector(popBack))
     }
 }
 
-extension ProblemsController: UITableViewDataSource, UITableViewDelegate {
+extension ChapterDetailController {
+    func setDataToUI(_ data: ChapterDetail) {
+        datasource = data.problems
+    }
+}
+
+extension ChapterDetailController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return datasource.count
-        return 8
+        return datasource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ProblemCell = tableView.dequeue(at: indexPath)
+        cell.setData(datasource[indexPath.row])
         return cell
     }
     
