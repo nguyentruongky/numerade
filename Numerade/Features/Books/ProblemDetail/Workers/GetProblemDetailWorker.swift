@@ -13,7 +13,7 @@ struct GetProblemDetailWorker {
         runLocally()
     }
     
-    func runLocally() {
+    private func runLocally() {
         let detail = Dataset.getProblemDetail(book: book, chapter: chapter, problem: problem)
         onSuccess(detail)
     }

@@ -11,7 +11,7 @@ struct GetBookDetailWorker {
         runLocally()
     }
 
-    func runLocally() {
+    private func runLocally() {
         let detail = Dataset.getBook(book: book)
         onSuccess(detail)
     }

@@ -3,20 +3,23 @@
 import UIKit
 
 class TabItemButton: UIButton {
-    private let inactiveColor = UIColor.clear
-    private let activeColor = UIColor(hex: "#1D16B5")
-    let nameLabel = UILabel(font: .main(.bold, size: 15), color: .white, alignment: .center)
-    convenience init(title: String) {
-        self.init(frame: .zero)
-        nameLabel.text = title
-        setupView()
-    }
     override var isSelected: Bool {
         didSet {
             backgroundColor = isSelected ? activeColor : inactiveColor
         }
     }
-    func setupView() {
+
+    private let inactiveColor = UIColor.clear
+    private let activeColor = UIColor(hex: "#1D16B5")
+    private let nameLabel = UILabel(font: .main(.bold, size: 15), color: .white, alignment: .center)
+
+    convenience init(title: String) {
+        self.init(frame: .zero)
+        nameLabel.text = title
+        setupView()
+    }
+
+    private func setupView() {
         backgroundColor = inactiveColor
         setCorner(radius: 5)
         nameLabel.textColor = .white
@@ -29,9 +32,11 @@ class TabItemButton: UIButton {
 
 class TopTabBarView: KNView {
     var items = [TabItemButton]()
-    let stackView = UIStackView()
+    private let stackView = UIStackView()
 
     func setupView(titles: [String]) {
+        backgroundColor = .clear
+
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         items = []
 
@@ -56,6 +61,5 @@ class TopTabBarView: KNView {
         if titles.isEmpty == false {
             items[0].isSelected = true
         }
-        backgroundColor = .clear
     }
 }

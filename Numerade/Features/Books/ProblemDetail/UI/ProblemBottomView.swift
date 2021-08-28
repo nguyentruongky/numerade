@@ -4,23 +4,29 @@ import UIKit
 
 extension ProblemDetailUI {
     class ProblemBottomView: KNView {
-        let tabBar = TabBar()
+        private let tabBar = TabBar()
         let informationView = InformationView()
         let moreAnswerView = MoreAnswerView()
         let transcriptView = TranscriptView()
-        let tabViewContainer = UIStackView(axis: .horizontal, distribution: .fill, alignment: .fill, space: 0)
+        private let tabViewContainer = UIStackView(axis: .horizontal, distribution: .fill, alignment: .fill, space: 0)
 
         override func setupView() {
             tabBar.didSelectTab = { [weak self] index in
                 self?.didSelectTab(index: index)
             }
+            setupTabBar()
+            tabViewContainer.addArrangeViews(views: informationView)
+            setupTabContainerView()
+        }
+        
+        private func setupTabBar() {
             addSubviews(views: tabBar)
             tabBar.horizontalSuperview()
             tabBar.topToSuperview()
             tabBar.height(44)
-
-            tabViewContainer.addArrangeViews(views: informationView)
-
+        }
+        
+        private func setupTabContainerView() {
             addSubviews(views: tabViewContainer)
             tabViewContainer.horizontalSuperview()
             tabViewContainer.verticalSpacing(toView: tabBar)
@@ -41,10 +47,10 @@ extension ProblemDetailUI {
 
 extension ProblemDetailUI {
     class TabBar: KNView {
-        lazy var informationButton = createTabButton(title: "Information")
-        lazy var moreAnswersButton = createTabButton(title: "More Answers")
-        lazy var transcriptButton = createTabButton(title: "Transcript")
-        let indicatorView = ViewFactory.createHorizontalLine(color: .black, lineHeight: 2)
+        private lazy var informationButton = createTabButton(title: "Information")
+        private lazy var moreAnswersButton = createTabButton(title: "More Answers")
+        private lazy var transcriptButton = createTabButton(title: "Transcript")
+        private let indicatorView = ViewFactory.createHorizontalLine(color: .black, lineHeight: 2)
         var didSelectTab: ((Int) -> Void)?
 
         override func setupView() {
@@ -91,7 +97,7 @@ extension ProblemDetailUI {
             indicatorView.bottomToSuperview()
         }
 
-        func createTabButton(title: String) -> UIButton {
+        private func createTabButton(title: String) -> UIButton {
             return UIButton(title: title, titleColor: .color_0D0D0D, font: .main())
         }
     }

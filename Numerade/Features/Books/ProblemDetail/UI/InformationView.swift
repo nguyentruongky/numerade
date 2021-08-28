@@ -11,11 +11,11 @@ extension ProblemDetailUI {
         let chapterNameLabel = UILabel(font: .main(size: 17), color: UIColor(hex: "#333333"), numberOfLines: 0)
 
         override func setupView() {
-            addTopicView()
-            addTextBookView()
+            setupTopicView()
+            setupTextBookView()
         }
 
-        private func addTopicView() {
+        private func setupTopicView() {
             let label = UILabel(text: "Topic", font: .main(.bold, size: 16), color: .color_0D0D0D)
             addSubviews(views: label)
             label.topLeftToSuperView(topSpace: 16, leftSpace: 16)
@@ -30,7 +30,7 @@ extension ProblemDetailUI {
             topicView.verticalSpacing(toView: label, space: 8)
         }
 
-        private func addTextBookView() {
+        private func setupTextBookView() {
             let label = UILabel(text: "Textbook", font: .main(.bold, size: 16), color: .color_0D0D0D)
             addSubviews(views: label)
             label.leftToSuperview(space: 16)

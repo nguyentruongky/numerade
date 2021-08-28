@@ -48,7 +48,7 @@
 		2618114926D88BC70083D8CD /* GetAllBooksWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */; };
 		2618114B26D88BE00083D8CD /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618114A26D88BE00083D8CD /* Book.swift */; };
 		2618114F26D88E0A0083D8CD /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 2618114E26D88E0A0083D8CD /* books.json */; };
-		2618115126D898E00083D8CD /* BookInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115026D898E00083D8CD /* BookInteraction.swift */; };
+		2618115126D898E00083D8CD /* BooksInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115026D898E00083D8CD /* BooksInteraction.swift */; };
 		2618115526D8E2000083D8CD /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115426D8E2000083D8CD /* Dataset.swift */; };
 		2618115726D8E5090083D8CD /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115626D8E5090083D8CD /* BookDetail.swift */; };
 		2618115926D8E7A30083D8CD /* BookDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */; };
@@ -125,7 +125,7 @@
 		2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllBooksWorker.swift; sourceTree = "<group>"; };
 		2618114A26D88BE00083D8CD /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		2618114E26D88E0A0083D8CD /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
-		2618115026D898E00083D8CD /* BookInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInteraction.swift; sourceTree = "<group>"; };
+		2618115026D898E00083D8CD /* BooksInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksInteraction.swift; sourceTree = "<group>"; };
 		2618115426D8E2000083D8CD /* Dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
 		2618115626D8E5090083D8CD /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailInteraction.swift; sourceTree = "<group>"; };
@@ -189,10 +189,12 @@
 		2600B71526D7195000593502 /* Numerade */ = {
 			isa = PBXGroup;
 			children = (
-				2600B75E26D71B5700593502 /* Features */,
+				2618117D26DA31DE0083D8CD /* CommonVIews */,
 				2600B74726D71A0400593502 /* Assets */,
 				2600B74926D71B3500593502 /* BasicKit */,
 				2600B74626D719F700593502 /* Configuration */,
+				2600B75E26D71B5700593502 /* Features */,
+				2618117C26DA20470083D8CD /* Models */,
 			);
 			path = Numerade;
 			sourceTree = "<group>";
@@ -256,8 +258,8 @@
 		2600B75E26D71B5700593502 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				2600B75F26D71B6000593502 /* MainTabController.swift */,
 				2600B76326D71D2D00593502 /* Books */,
+				2600B75F26D71B6000593502 /* MainTabController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -279,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				2618115E26D8ED4B0083D8CD /* Controller+Logic */,
-				2618115C26D8ED290083D8CD /* Model */,
 				2618115D26D8ED340083D8CD /* UI */,
 				2618116F26D97A2D0083D8CD /* Workers */,
 			);
@@ -290,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				2618115F26D8ED940083D8CD /* Controller+Logic */,
-				2618116126D8EDA80083D8CD /* Model */,
 				2618116026D8EDA20083D8CD /* UI */,
 				2618116E26D97A020083D8CD /* Workers */,
 			);
@@ -302,7 +302,6 @@
 			children = (
 				2618117026D97A560083D8CD /* Controller+Logic */,
 				2618117226D97A6A0083D8CD /* UI */,
-				2618117126D97A630083D8CD /* Workers */,
 			);
 			path = Subject;
 			sourceTree = "<group>";
@@ -311,8 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				2618116C26D979EB0083D8CD /* Controller+Logic */,
-				2618116A26D979D10083D8CD /* Model */,
-				2618116B26D979DA0083D8CD /* UI */,
 				2618116D26D979F10083D8CD /* Workers */,
 			);
 			path = ChapterDetail;
@@ -322,7 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				2618117326D97A870083D8CD /* Controller+Logic */,
-				2618117A26D98DB60083D8CD /* Model */,
 				2618113826D881760083D8CD /* UI */,
 				2618117B26D98DBC0083D8CD /* Workers */,
 			);
@@ -352,14 +348,6 @@
 			path = DummyData;
 			sourceTree = "<group>";
 		};
-		2618115C26D8ED290083D8CD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2618115626D8E5090083D8CD /* BookDetail.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		2618115D26D8ED340083D8CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,8 +368,8 @@
 		2618115F26D8ED940083D8CD /* Controller+Logic */ = {
 			isa = PBXGroup;
 			children = (
-				2618115026D898E00083D8CD /* BookInteraction.swift */,
 				2600B76126D71D2700593502 /* BooksController.swift */,
+				2618115026D898E00083D8CD /* BooksInteraction.swift */,
 			);
 			path = "Controller+Logic";
 			sourceTree = "<group>";
@@ -390,31 +378,6 @@
 			isa = PBXGroup;
 			children = (
 				2600B77426D771FD00593502 /* TopTabBarView.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		2618116126D8EDA80083D8CD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2618114A26D88BE00083D8CD /* Book.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2618116A26D979D10083D8CD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2618116826D973340083D8CD /* ChapterDetail.swift */,
-				2618116226D8F26A0083D8CD /* Problem.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2618116B26D979DA0083D8CD /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				2600B77D26D7798400593502 /* ProblemCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -439,6 +402,7 @@
 		2618116E26D97A020083D8CD /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */,
 				2618114626D886270083D8CD /* GetCategoriesWorker.swift */,
 			);
 			path = Workers;
@@ -460,14 +424,6 @@
 			path = "Controller+Logic";
 			sourceTree = "<group>";
 		};
-		2618117126D97A630083D8CD /* Workers */ = {
-			isa = PBXGroup;
-			children = (
-				2618114826D88BC70083D8CD /* GetAllBooksWorker.swift */,
-			);
-			path = Workers;
-			sourceTree = "<group>";
-		};
 		2618117226D97A6A0083D8CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,20 +441,32 @@
 			path = "Controller+Logic";
 			sourceTree = "<group>";
 		};
-		2618117A26D98DB60083D8CD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2618117426D97E4F0083D8CD /* ProblemDetail.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		2618117B26D98DBC0083D8CD /* Workers */ = {
 			isa = PBXGroup;
 			children = (
 				2618117826D9830C0083D8CD /* GetProblemDetailWorker.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		2618117C26DA20470083D8CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2618114A26D88BE00083D8CD /* Book.swift */,
+				2618115626D8E5090083D8CD /* BookDetail.swift */,
+				2618116826D973340083D8CD /* ChapterDetail.swift */,
+				2618116226D8F26A0083D8CD /* Problem.swift */,
+				2618117426D97E4F0083D8CD /* ProblemDetail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2618117D26DA31DE0083D8CD /* CommonVIews */ = {
+			isa = PBXGroup;
+			children = (
+				2600B77D26D7798400593502 /* ProblemCell.swift */,
+			);
+			path = CommonVIews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -645,7 +613,7 @@
 				2618115726D8E5090083D8CD /* BookDetail.swift in Sources */,
 				2600B76B26D7298600593502 /* SubjectController.swift in Sources */,
 				2600B75A26D71B3500593502 /* KNControlConstruction.swift in Sources */,
-				2618115126D898E00083D8CD /* BookInteraction.swift in Sources */,
+				2618115126D898E00083D8CD /* BooksInteraction.swift in Sources */,
 				2600B71726D7195000593502 /* AppDelegate.swift in Sources */,
 				2600B77826D7723600593502 /* BookCell.swift in Sources */,
 				2600B75526D71B3500593502 /* KNGeneral.swift in Sources */,

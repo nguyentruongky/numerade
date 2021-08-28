@@ -2,8 +2,8 @@
 
 import UIKit
 
-class BookInteraction {
-    weak var controller: BooksController?
+class BooksInteraction {
+    private weak var controller: BooksController?
     init(controller: BooksController) {
         self.controller = controller
     }

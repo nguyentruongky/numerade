@@ -3,47 +3,33 @@
 import UIKit
 
 class ChapterDetailController: KNController {
+    static func pushed(from source: UIViewController, book: Book?, chapter: Chapter) {
+        let vc = ChapterDetailController()
+        vc.book = book
+        vc.chapter = chapter
+        source.navigationController?.pushViewController(vc, animated: true)
+    }
     override var shouldGetDataViewDidLoad: Bool { true }
     lazy var interaction = ChapterDetailInteraction(controller: self)
-    let bookView = BookInfoView()
     var book: Book?
     var chapter: Chapter?
-
-    lazy var tableView = UITableView(cells: [ProblemCell.self], source: self)
     var datasource = [Problem]() {
         didSet {
             tableView.reloadData()
         }
     }
-    let navigationBar = NavigationBar()
+    
+    private let bookView = BookInfoView()
+    private lazy var tableView = UITableView(cells: [ProblemCell.self], source: self)
+    private let navigationBar = NavigationBar()
 
     override func setupView() {
         view.backgroundColor = UIColor(hex: "#FEFFFE")
         tableView.backgroundColor = UIColor(hex: "#FEFFFE")
 
-        formatNavigationBar()
-        view.addSubviews(views: navigationBar)
-        navigationBar.horizontalSuperview()
-        navigationBar.topToSuperview()
-
-        view.addSubviews(views: bookView)
-        bookView.horizontalSuperview(space: 24)
-        bookView.verticalSpacing(toView: navigationBar, space: 24)
-
-        let line = ViewFactory.createHorizontalLine()
-        view.addSubviews(views: line)
-        line.horizontalSuperview()
-        line.verticalSpacing(toView: bookView, space: 24)
-
-        let chapterLabel = UILabel(text: "Chapters", font: .main(.bold, size: 20), color: UIColor.color_0D0D0D)
-        view.addSubviews(views: chapterLabel)
-        chapterLabel.horizontalSuperview(space: 24)
-        chapterLabel.verticalSpacing(toView: line, space: 24)
-
-        view.addSubviews(views: tableView)
-        tableView.horizontalSuperview()
-        tableView.verticalSpacing(toView: chapterLabel, space: 24)
-        tableView.bottomToSuperview()
+        setupNavigationBar()
+        setupBookView()
+        setupTableView()
     }
 
     override func getData() {
@@ -54,12 +40,36 @@ class ChapterDetailController: KNController {
         interaction.getData()
         navigationBar.searchTextField.text = chapter?.title
     }
+}
 
-    func formatNavigationBar() {
+extension ChapterDetailController {
+    private func setupNavigationBar() {
         navigationBar.searchTextField.isEnabled = false
         navigationBar.searchTextField.setView(.left, space: 16)
         navigationBar.searchTextField.setView(.right, space: 16)
         navigationBar.backButton.addTarget(self, action: #selector(popBack))
+
+        view.addSubviews(views: navigationBar)
+        navigationBar.horizontalSuperview()
+        navigationBar.topToSuperview()
+    }
+    
+    private func setupBookView() {
+        view.addSubviews(views: bookView)
+        bookView.horizontalSuperview(space: 24)
+        bookView.verticalSpacing(toView: navigationBar, space: 24)
+
+        let line = ViewFactory.createHorizontalLine()
+        view.addSubviews(views: line)
+        line.horizontalSuperview()
+        line.verticalSpacing(toView: bookView, space: 24)
+    }
+
+    private func setupTableView() {
+        view.addSubviews(views: tableView)
+        tableView.horizontalSuperview()
+        tableView.verticalSpacing(toView: bookView, space: 48)
+        tableView.bottomToSuperview()
     }
 }
 
@@ -85,10 +95,9 @@ extension ChapterDetailController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = ProblemDetailController()
-        vc.book = book
-        vc.chapter = chapter
-        vc.problem = datasource[indexPath.row]
-        present(vc, animated: true)
+        ProblemDetailController.presented(from: self,
+                                          book: book,
+                                          chapter: chapter,
+                                          problem: datasource[indexPath.row])
     }
 }

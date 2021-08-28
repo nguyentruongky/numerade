@@ -11,7 +11,7 @@ struct GetChapterDetailWorker {
         runLocally()
     }
     
-    func runLocally() {
+    private func runLocally() {
         let problems = Dataset.getChapterDetail(chapterId: chapter.id)
         let detail = ChapterDetail(chapter: chapter, problems: problems)
         onSuccess(detail)
