@@ -3,12 +3,6 @@
 import UIKit
 
 class ChapterDetailController: KNController {
-    static func pushed(from source: UIViewController, book: Book?, chapter: Chapter) {
-        let vc = ChapterDetailController()
-        vc.book = book
-        vc.chapter = chapter
-        source.navigationController?.pushViewController(vc, animated: true)
-    }
     override var shouldGetDataViewDidLoad: Bool { true }
     lazy var interaction = ChapterDetailInteraction(controller: self)
     var book: Book?
@@ -95,9 +89,7 @@ extension ChapterDetailController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        ProblemDetailController.presented(from: self,
-                                          book: book,
-                                          chapter: chapter,
-                                          problem: datasource[indexPath.row])
+        let destination = Destination.problemDetail(book: book, chapter: chapter, problem: datasource[indexPath.row])
+        present(destination: destination)
     }
 }

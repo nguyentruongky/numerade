@@ -127,6 +127,6 @@ extension BooksController: SubjectDatasource {
 // MARK: SETUP ACTIONS
 extension BooksController: SubjectDelegate {
     func showBookDetail(book: Book) {
-        BookDetailController.pushed(from: self, withData: book)
+        push(to: .bookDetail(book: book))
     }
 }

@@ -3,13 +3,6 @@
 import UIKit
 
 class ProblemDetailController: KNController {
-    static func presented(from source: UIViewController, book: Book?, chapter: Chapter?, problem: Problem) {
-        let vc = ProblemDetailController()
-        vc.book = book
-        vc.chapter = chapter
-        vc.problem = problem
-        source.present(vc, animated: true)
-    }
     override var shouldGetDataViewDidLoad: Bool { true }
     
     private lazy var interaction = ProblemDetailInteraction(controller: self)

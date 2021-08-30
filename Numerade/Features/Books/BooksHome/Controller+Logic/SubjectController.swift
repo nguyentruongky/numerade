@@ -19,7 +19,6 @@ class SubjectController: KNController {
         }
     }
     var category: String?
-    var showBookDetailAction: ((BookDetailController) -> Void)?
     weak var datasource: SubjectDatasource?
     weak var delegate: SubjectDelegate?
 

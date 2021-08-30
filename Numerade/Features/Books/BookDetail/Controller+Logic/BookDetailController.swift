@@ -3,11 +3,6 @@
 import UIKit
 
 class BookDetailController: KNController {
-    static func pushed(from source: UIViewController, withData book: Book) {
-        let vc = BookDetailController()
-        vc.book = book
-        source.navigationController?.pushViewController(vc, animated: true)
-    }
     override var shouldGetDataViewDidLoad: Bool { true }
     var book: Book?
     private lazy var interaction = BookDetailInteraction(controller: self)
@@ -91,8 +86,6 @@ extension BookDetailController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        ChapterDetailController.pushed(from: self,
-                                       book: book,
-                                       chapter: datasource[indexPath.row])
+        push(to: .chapterDetail(book: book, chapter: datasource[indexPath.row]))
     }
 }
