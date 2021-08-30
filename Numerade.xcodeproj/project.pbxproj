@@ -27,14 +27,9 @@
 		2600B76226D71D2700593502 /* BooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76126D71D2700593502 /* BooksController.swift */; };
 		2600B76626D721A100593502 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2600B76526D721A100593502 /* Kingfisher */; };
 		2600B76926D7286700593502 /* SwipeMenuViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 2600B76826D7286700593502 /* SwipeMenuViewController */; };
-		2600B76B26D7298600593502 /* SubjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76A26D7298600593502 /* SubjectController.swift */; };
 		2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76C26D739F300593502 /* KNUITextFieldExtension.swift */; };
-		2600B76F26D74AFB00593502 /* BookDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76E26D74AFB00593502 /* BookDetailController.swift */; };
-		2600B77226D7719C00593502 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77126D7719C00593502 /* ChapterCell.swift */; };
 		2600B77526D771FD00593502 /* TopTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77426D771FD00593502 /* TopTabBarView.swift */; };
-		2600B77826D7723600593502 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77726D7723600593502 /* BookCell.swift */; };
 		2600B77A26D772A900593502 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77926D772A900593502 /* ViewFactory.swift */; };
-		2600B77C26D776F200593502 /* ChapterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77B26D776F200593502 /* ChapterDetailController.swift */; };
 		2600B77E26D7798400593502 /* ProblemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77D26D7798400593502 /* ProblemCell.swift */; };
 		2618113E26D881760083D8CD /* ProblemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618113526D881760083D8CD /* ProblemDetailController.swift */; };
 		2618113F26D881760083D8CD /* ProblemDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618113626D881760083D8CD /* ProblemDetailUI.swift */; };
@@ -51,15 +46,21 @@
 		2618115126D898E00083D8CD /* BooksInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115026D898E00083D8CD /* BooksInteraction.swift */; };
 		2618115526D8E2000083D8CD /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115426D8E2000083D8CD /* Dataset.swift */; };
 		2618115726D8E5090083D8CD /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115626D8E5090083D8CD /* BookDetail.swift */; };
-		2618115926D8E7A30083D8CD /* BookDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */; };
-		2618115B26D8E7E50083D8CD /* GetBookDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */; };
 		2618116326D8F26A0083D8CD /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116226D8F26A0083D8CD /* Problem.swift */; };
-		2618116526D972C80083D8CD /* ChapterDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116426D972C80083D8CD /* ChapterDetailInteraction.swift */; };
-		2618116726D972EB0083D8CD /* GetChapterDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116626D972EB0083D8CD /* GetChapterDetailWorker.swift */; };
 		2618116926D973340083D8CD /* ChapterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116826D973340083D8CD /* ChapterDetail.swift */; };
 		2618117526D97E4F0083D8CD /* ProblemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618117426D97E4F0083D8CD /* ProblemDetail.swift */; };
 		2618117726D982E60083D8CD /* ProblemDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618117626D982E60083D8CD /* ProblemDetailInteraction.swift */; };
 		2618117926D9830C0083D8CD /* GetProblemDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618117826D9830C0083D8CD /* GetProblemDetailWorker.swift */; };
+		26D911BF26DC21F900692361 /* SubjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76A26D7298600593502 /* SubjectController.swift */; };
+		26D911C026DC21F900692361 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77726D7723600593502 /* BookCell.swift */; };
+		26D911C126DC227B00692361 /* BookDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B76E26D74AFB00593502 /* BookDetailController.swift */; };
+		26D911C226DC227B00692361 /* BookDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115826D8E7A30083D8CD /* BookDetailInteraction.swift */; };
+		26D911C326DC227B00692361 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77126D7719C00593502 /* ChapterCell.swift */; };
+		26D911C426DC227B00692361 /* GetBookDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618115A26D8E7E50083D8CD /* GetBookDetailWorker.swift */; };
+		26D911C526DC22B700692361 /* GetChapterDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116626D972EB0083D8CD /* GetChapterDetailWorker.swift */; };
+		26D911C626DC22B700692361 /* ChapterDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116426D972C80083D8CD /* ChapterDetailInteraction.swift */; };
+		26D911C726DC22B700692361 /* ChapterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77B26D776F200593502 /* ChapterDetailController.swift */; };
+		26D911C926DC284D00692361 /* Routers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D911C826DC284D00692361 /* Routers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		2618117426D97E4F0083D8CD /* ProblemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetail.swift; sourceTree = "<group>"; };
 		2618117626D982E60083D8CD /* ProblemDetailInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetailInteraction.swift; sourceTree = "<group>"; };
 		2618117826D9830C0083D8CD /* GetProblemDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProblemDetailWorker.swift; sourceTree = "<group>"; };
+		26D911C826DC284D00692361 /* Routers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,12 +191,13 @@
 		2600B71526D7195000593502 /* Numerade */ = {
 			isa = PBXGroup;
 			children = (
-				2618117D26DA31DE0083D8CD /* CommonVIews */,
+				2618117D26DA31DE0083D8CD /* Common */,
 				2600B74726D71A0400593502 /* Assets */,
 				2600B74926D71B3500593502 /* BasicKit */,
 				2600B74626D719F700593502 /* Configuration */,
 				2600B75E26D71B5700593502 /* Features */,
 				2618117C26DA20470083D8CD /* Models */,
+				26D911C826DC284D00692361 /* Routers.swift */,
 			);
 			path = Numerade;
 			sourceTree = "<group>";
@@ -271,8 +274,6 @@
 				2600B77326D771CB00593502 /* BooksHome */,
 				2600B78126D7A13000593502 /* ChapterDetail */,
 				2618113426D881760083D8CD /* ProblemDetail */,
-				2600B77626D7721300593502 /* Subject */,
-				2600B77926D772A900593502 /* ViewFactory.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -295,15 +296,6 @@
 				2618116E26D97A020083D8CD /* Workers */,
 			);
 			path = BooksHome;
-			sourceTree = "<group>";
-		};
-		2600B77626D7721300593502 /* Subject */ = {
-			isa = PBXGroup;
-			children = (
-				2618117026D97A560083D8CD /* Controller+Logic */,
-				2618117226D97A6A0083D8CD /* UI */,
-			);
-			path = Subject;
 			sourceTree = "<group>";
 		};
 		2600B78126D7A13000593502 /* ChapterDetail */ = {
@@ -370,6 +362,7 @@
 			children = (
 				2600B76126D71D2700593502 /* BooksController.swift */,
 				2618115026D898E00083D8CD /* BooksInteraction.swift */,
+				2600B76A26D7298600593502 /* SubjectController.swift */,
 			);
 			path = "Controller+Logic";
 			sourceTree = "<group>";
@@ -377,6 +370,7 @@
 		2618116026D8EDA20083D8CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2600B77726D7723600593502 /* BookCell.swift */,
 				2600B77426D771FD00593502 /* TopTabBarView.swift */,
 			);
 			path = UI;
@@ -416,22 +410,6 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
-		2618117026D97A560083D8CD /* Controller+Logic */ = {
-			isa = PBXGroup;
-			children = (
-				2600B76A26D7298600593502 /* SubjectController.swift */,
-			);
-			path = "Controller+Logic";
-			sourceTree = "<group>";
-		};
-		2618117226D97A6A0083D8CD /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				2600B77726D7723600593502 /* BookCell.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		2618117326D97A870083D8CD /* Controller+Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,12 +439,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2618117D26DA31DE0083D8CD /* CommonVIews */ = {
+		2618117D26DA31DE0083D8CD /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				2600B77D26D7798400593502 /* ProblemCell.swift */,
+				2600B77926D772A900593502 /* ViewFactory.swift */,
 			);
-			path = CommonVIews;
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,22 +586,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D911C326DC227B00692361 /* ChapterCell.swift in Sources */,
+				26D911BF26DC21F900692361 /* SubjectController.swift in Sources */,
 				2618114126D881760083D8CD /* ProblemBottomView.swift in Sources */,
-				2600B77226D7719C00593502 /* ChapterCell.swift in Sources */,
+				26D911C626DC22B700692361 /* ChapterDetailInteraction.swift in Sources */,
 				2618114326D881760083D8CD /* VideoView.swift in Sources */,
 				2618115726D8E5090083D8CD /* BookDetail.swift in Sources */,
-				2600B76B26D7298600593502 /* SubjectController.swift in Sources */,
 				2600B75A26D71B3500593502 /* KNControlConstruction.swift in Sources */,
 				2618115126D898E00083D8CD /* BooksInteraction.swift in Sources */,
 				2600B71726D7195000593502 /* AppDelegate.swift in Sources */,
-				2600B77826D7723600593502 /* BookCell.swift in Sources */,
 				2600B75526D71B3500593502 /* KNGeneral.swift in Sources */,
-				2618115926D8E7A30083D8CD /* BookDetailInteraction.swift in Sources */,
-				2600B76F26D74AFB00593502 /* BookDetailController.swift in Sources */,
 				2600B76D26D739F300593502 /* KNUITextFieldExtension.swift in Sources */,
 				2618114426D881760083D8CD /* TranscriptView.swift in Sources */,
 				2600B75B26D71B3500593502 /* KNConstraints.swift in Sources */,
+				26D911C426DC227B00692361 /* GetBookDetailWorker.swift in Sources */,
+				26D911C026DC21F900692361 /* BookCell.swift in Sources */,
 				2600B75726D71B3500593502 /* KNCollectionExtension.swift in Sources */,
+				26D911C726DC22B700692361 /* ChapterDetailController.swift in Sources */,
 				2600B77526D771FD00593502 /* TopTabBarView.swift in Sources */,
 				2600B75826D71B3500593502 /* KNView+KNController.swift in Sources */,
 				2600B76026D71B6000593502 /* MainTabController.swift in Sources */,
@@ -630,6 +610,9 @@
 				2600B75926D71B3500593502 /* Fonts+Colors.swift in Sources */,
 				2600B75D26D71B3500593502 /* KNTableExtension.swift in Sources */,
 				2600B75C26D71B3500593502 /* KNDateExtension.swift in Sources */,
+				26D911C926DC284D00692361 /* Routers.swift in Sources */,
+				26D911C226DC227B00692361 /* BookDetailInteraction.swift in Sources */,
+				26D911C526DC22B700692361 /* GetChapterDetailWorker.swift in Sources */,
 				2618114526D881760083D8CD /* InformationView.swift in Sources */,
 				2618114726D886270083D8CD /* GetCategoriesWorker.swift in Sources */,
 				2618113E26D881760083D8CD /* ProblemDetailController.swift in Sources */,
@@ -643,16 +626,13 @@
 				2618115526D8E2000083D8CD /* Dataset.swift in Sources */,
 				2618116326D8F26A0083D8CD /* Problem.swift in Sources */,
 				2618117926D9830C0083D8CD /* GetProblemDetailWorker.swift in Sources */,
-				2618115B26D8E7E50083D8CD /* GetBookDetailWorker.swift in Sources */,
 				2618117726D982E60083D8CD /* ProblemDetailInteraction.swift in Sources */,
-				2618116526D972C80083D8CD /* ChapterDetailInteraction.swift in Sources */,
 				2600B77A26D772A900593502 /* ViewFactory.swift in Sources */,
 				2618113F26D881760083D8CD /* ProblemDetailUI.swift in Sources */,
 				2600B71926D7195100593502 /* SceneDelegate.swift in Sources */,
-				2618116726D972EB0083D8CD /* GetChapterDetailWorker.swift in Sources */,
+				26D911C126DC227B00692361 /* BookDetailController.swift in Sources */,
 				2618114926D88BC70083D8CD /* GetAllBooksWorker.swift in Sources */,
 				2618117526D97E4F0083D8CD /* ProblemDetail.swift in Sources */,
-				2600B77C26D776F200593502 /* ChapterDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
