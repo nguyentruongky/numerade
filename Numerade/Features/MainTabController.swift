@@ -4,7 +4,7 @@ import UIKit
 
 class MainTabController: UITabBarController {
     private(set) lazy var booksController = BooksController()
-    private(set) lazy var askController = UIViewController()
+    private(set) lazy var askController = AskController()
     private(set) lazy var snapSolveController = UIViewController()
     private(set) lazy var bootCampsController = UIViewController()
     private(set) lazy var moreController = UIViewController()

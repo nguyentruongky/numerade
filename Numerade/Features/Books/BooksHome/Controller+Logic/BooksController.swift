@@ -4,7 +4,7 @@ import SwipeMenuViewController
 import UIKit
 
 class BooksController: KNController {
-    // MARK: - LOGIC ELEMENT
+    // MARK: - LOGIC VARIABLES
     override var shouldGetDataViewDidLoad: Bool { true }
     private lazy var interaction = BooksInteraction(controller: self)
     var booksDatasource = [String: [Book]]() {
@@ -12,6 +12,15 @@ class BooksController: KNController {
             reloadData()
         }
     }
+    
+    func reloadData() {
+        swipeMenuView.reloadData()
+        swipeMenuView.tabView?.isHidden = true
+        controllers.forEach {
+            $0.getData()
+        }
+    }
+
     var categories = [String]() {
         didSet {
             controllers = categories.map { [weak self] category in
@@ -41,14 +50,6 @@ class BooksController: KNController {
 
     override func getData() {
         interaction.getData()
-    }
-
-    func reloadData() {
-        swipeMenuView.reloadData()
-        swipeMenuView.tabView?.isHidden = true
-        controllers.forEach {
-            $0.getData()
-        }
     }
 }
 
@@ -124,7 +125,7 @@ extension BooksController: SubjectDatasource {
     }
 }
 
-// MARK: SETUP ACTIONS
+// MARK: ACTIONS
 extension BooksController: SubjectDelegate {
     func showBookDetail(book: Book) {
         push(to: .bookDetail(book: book))

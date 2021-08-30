@@ -61,6 +61,7 @@
 		26D911C626DC22B700692361 /* ChapterDetailInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618116426D972C80083D8CD /* ChapterDetailInteraction.swift */; };
 		26D911C726DC22B700692361 /* ChapterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B77B26D776F200593502 /* ChapterDetailController.swift */; };
 		26D911C926DC284D00692361 /* Routers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D911C826DC284D00692361 /* Routers.swift */; };
+		26D911CF26DD1DF800692361 /* AskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D911CE26DD1DF800692361 /* AskController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		2618117626D982E60083D8CD /* ProblemDetailInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetailInteraction.swift; sourceTree = "<group>"; };
 		2618117826D9830C0083D8CD /* GetProblemDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProblemDetailWorker.swift; sourceTree = "<group>"; };
 		26D911C826DC284D00692361 /* Routers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routers.swift; sourceTree = "<group>"; };
+		26D911CE26DD1DF800692361 /* AskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 			children = (
 				2600B76326D71D2D00593502 /* Books */,
 				2600B75F26D71B6000593502 /* MainTabController.swift */,
+				26D911CE26DD1DF800692361 /* AskController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D911C326DC227B00692361 /* ChapterCell.swift in Sources */,
+				26D911CF26DD1DF800692361 /* AskController.swift in Sources */,
 				26D911BF26DC21F900692361 /* SubjectController.swift in Sources */,
 				2618114126D881760083D8CD /* ProblemBottomView.swift in Sources */,
 				26D911C626DC22B700692361 /* ChapterDetailInteraction.swift in Sources */,
